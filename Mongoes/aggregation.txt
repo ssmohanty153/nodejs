@@ -1,0 +1,4489 @@
+alethea@alelap150:~/AletheProject/wifi-multiclient-simulator-wicheck6/D2A-GUI/WiCheck-GUI/React-GUI$ cd
+alethea@alelap150:~$ mongo
+
+Command 'mongo' not found, but can be installed with:
+
+sudo apt install mongodb-clients
+
+alethea@alelap150:~$ mongo
+
+Command 'mongo' not found, but can be installed with:
+
+sudo apt install mongodb-clients
+
+alethea@alelap150:~$ mongodb
+
+Command 'mongodb' not found, did you mean:
+
+  command 'mongod' from deb mongodb-server-core (1:3.6.9+really3.6.8+90~g8e540c0b6d-0ubuntu5.3)
+
+Try: sudo apt install <deb name>
+
+alethea@alelap150:~$ sudo service mongod start.'
+> ^C^C
+alethea@alelap150:~$ ^C
+alethea@alelap150:~$ sudo service mongod start
+[sudo] password for alethea: 
+alethea@alelap150:~$ sudo service mongo start
+Failed to start mongo.service: Unit mongo.service not found.
+alethea@alelap150:~$ sudo systemctl status mongod
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2023-05-03 10:04:17 IST; 6h ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 1739 (mongod)
+     Memory: 232.4M
+     CGroup: /system.slice/mongod.service
+             └─1739 /usr/bin/mongod --config /etc/mongod.conf
+
+May 03 10:04:17 alelap150 systemd[1]: Started MongoDB Database Server.
+alethea@alelap150:~$ 
+alethea@alelap150:~$ mongoose
+
+Command 'mongoose' not found, but can be installed with:
+
+sudo apt install mongoose
+
+alethea@alelap150:~$ sudo apt install mongodb-org
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+mongodb-org is already the newest version (6.0.5).
+The following package was automatically installed and is no longer required:
+  gir1.2-goa-1.0
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 13 not upgraded.
+alethea@alelap150:~$ sudo apt update
+Ign:1 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 InRelease
+Hit:2 https://dl.google.com/linux/chrome/deb stable InRelease                                                                                                                                               
+Hit:3 https://cli-assets.heroku.com/apt ./ InRelease                                                                                                                                                        
+Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]                                                
+Hit:5 http://dell.archive.canonical.com focal InRelease                                             
+Hit:6 https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 Release                             
+Hit:7 http://in.archive.ubuntu.com/ubuntu focal InRelease                      
+Get:8 http://in.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:11 http://security.ubuntu.com/ubuntu focal-security/main amd64 DEP-11 Metadata [59.9 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu focal-updates/main amd64 DEP-11 Metadata [274 kB]
+Get:13 http://security.ubuntu.com/ubuntu focal-security/universe amd64 DEP-11 Metadata [95.6 kB]
+Get:14 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 DEP-11 Metadata [940 B]
+Get:15 http://in.archive.ubuntu.com/ubuntu focal-updates/universe amd64 DEP-11 Metadata [409 kB]
+Get:16 http://in.archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 DEP-11 Metadata [944 B]
+Get:17 http://in.archive.ubuntu.com/ubuntu focal-backports/main amd64 DEP-11 Metadata [8,000 B]
+Get:18 http://in.archive.ubuntu.com/ubuntu focal-backports/universe amd64 DEP-11 Metadata [30.5 kB]
+Fetched 1,215 kB in 4s (313 kB/s)                                              
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
+alethea@alelap150:~$ sudo systemctl start mongod.service
+alethea@alelap150:~$ sudo systemctl status mongod
+● mongod.service - MongoDB Database Server
+     Loaded: loaded (/lib/systemd/system/mongod.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2023-05-03 10:04:17 IST; 6h ago
+       Docs: https://docs.mongodb.org/manual
+   Main PID: 1739 (mongod)
+     Memory: 232.4M
+     CGroup: /system.slice/mongod.service
+             └─1739 /usr/bin/mongod --config /etc/mongod.conf
+
+May 03 10:04:17 alelap150 systemd[1]: Started MongoDB Database Server.
+alethea@alelap150:~$ mongod
+{"t":{"$date":"2023-05-03T16:23:26.787+05:30"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"main","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
+{"t":{"$date":"2023-05-03T16:23:26.791+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2023-05-03T16:23:26.792+05:30"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+{"t":{"$date":"2023-05-03T16:23:26.797+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+{"t":{"$date":"2023-05-03T16:23:26.797+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+{"t":{"$date":"2023-05-03T16:23:26.797+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ShardSplitDonorService","namespace":"config.tenantSplitDonors"}}
+{"t":{"$date":"2023-05-03T16:23:26.797+05:30"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+{"t":{"$date":"2023-05-03T16:23:26.798+05:30"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":32233,"port":27017,"dbPath":"/data/db","architecture":"64-bit","host":"alelap150"}}
+{"t":{"$date":"2023-05-03T16:23:26.798+05:30"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"6.0.5","gitVersion":"c9a99c120371d4d4c52cbb15dac34a36ce8d3b1d","openSSLVersion":"OpenSSL 1.1.1f  31 Mar 2020","modules":[],"allocator":"tcmalloc","environment":{"distmod":"ubuntu2004","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2023-05-03T16:23:26.798+05:30"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"Ubuntu","version":"20.04"}}}
+{"t":{"$date":"2023-05-03T16:23:26.798+05:30"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{}}}
+{"t":{"$date":"2023-05-03T16:23:26.799+05:30"},"s":"E",  "c":"NETWORK",  "id":23024,   "ctx":"initandlisten","msg":"Failed to unlink socket file","attr":{"path":"/tmp/mongodb-27017.sock","error":"Operation not permitted"}}
+{"t":{"$date":"2023-05-03T16:23:26.799+05:30"},"s":"F",  "c":"ASSERT",   "id":23091,   "ctx":"initandlisten","msg":"Fatal assertion","attr":{"msgid":40486,"file":"src/mongo/transport/transport_layer_asio.cpp","line":1126}}
+{"t":{"$date":"2023-05-03T16:23:26.799+05:30"},"s":"F",  "c":"ASSERT",   "id":23092,   "ctx":"initandlisten","msg":"\n\n***aborting after fassert() failure\n\n"}
+alethea@alelap150:~$ mongo
+
+Command 'mongo' not found, but can be installed with:
+
+sudo apt install mongodb-clients
+
+alethea@alelap150:~$ mon
+mongod          mongodump       mongoexport     mongofiles      mongoimport     mongorestore    mongos          mongosh         mongostat       mongotop        monitor-sensor  
+alethea@alelap150:~$ mongos
+BadValue: error: no args for --configdb
+try 'mongos --help' for more information
+alethea@alelap150:~$ mongosh 
+Current Mongosh Log ID:	64523d3de956c06934a7aaa0
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.0
+Using MongoDB:		6.0.5
+Using Mongosh:		1.8.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-05-03T10:04:18.314+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-05-03T10:04:19.378+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2023-05-03T10:04:19.378+05:30: vm.max_map_count is too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> show dbs
+Blog          72.00 KiB
+UrlShortener  84.00 KiB
+admin         40.00 KiB
+config        60.00 KiB
+local         80.00 KiB
+test> db.orders.insertMany( [
+...    { _id: 0, name: "Pepperoni", size: "small", price: 19,
+...      quantity: 10, date: ISODate( "2021-03-13T08:14:30Z" ) },
+...    { _id: 1, name: "Pepperoni", size: "medium", price: 20,
+...      quantity: 20, date : ISODate( "2021-03-13T09:13:24Z" ) },
+...    { _id: 2, name: "Pepperoni", size: "large", price: 21,
+...      quantity: 30, date : ISODate( "2021-03-17T09:22:12Z" ) },
+...    { _id: 3, name: "Cheese", size: "small", price: 12,
+...      quantity: 15, date : ISODate( "2021-03-13T11:21:39.736Z" ) },
+...    { _id: 4, name: "Cheese", size: "medium", price: 13,
+...      quantity:50, date : ISODate( "2022-01-12T21:23:13.331Z" ) },
+...    { _id: 5, name: "Cheese", size: "large", price: 14,
+...      quantity: 10, date : ISODate( "2022-01-12T05:08:13Z" ) },
+...    { _id: 6, name: "Vegan", size: "small", price: 17,
+...      quantity: 10, date : ISODate( "2021-01-13T05:08:13Z" ) },
+...    { _id: 7, name: "Vegan", size: "medium", price: 18,
+...      quantity: 10, date : ISODate( "2021-01-13T05:10:13Z" ) }
+... ] )
+{
+  acknowledged: true,
+  insertedIds: { '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7 }
+}
+test> show dbs
+Blog          72.00 KiB
+UrlShortener  84.00 KiB
+admin         40.00 KiB
+config        72.00 KiB
+local         80.00 KiB
+test           8.00 KiB
+test> use Blog
+switched to db Blog
+Blog> use Blog
+use Blog
+
+Blog> use Blog
+already on db Blog
+Blog> show collections
+blogs
+Blog> use Blog
+use Blog
+
+Blog> [
+...    { _id: 0, name: "Pepperoni", size: "small", price: 19,
+...      quantity: 10, date: ISODate( "2021-03-13T08:14:30Z" ) },
+...    { _id: 1, name: "Pepperoni", size: "medium", price: 20,
+...      quantity: 20, date : ISODate( "2021-03-13T09:13:24Z" ) },
+...    { _id: 2, name: "Pepperoni", size: "large", price: 21,
+...      quantity: 30, date : ISODate( "2021-03-17T09:22:12Z" ) },
+...    { _id: 3, name: "Cheese", size: "small", price: 12,
+...      quantity: 15, date : ISODate( "2021-03-13T11:21:39.736Z" ) },
+...    { _id: 4, name: "Cheese", size: "medium", price: 13,
+...      quantity:50, date : ISODate( "2022-01-12T21:23:13.331Z" ) },
+...    { _id: 5, name: "Cheese", size: "large", price: 14,
+...      quantity: 10, date : ISODate( "2022-01-12T05:08:13Z" ) },
+...    { _id: 6, name: "Vegan", size: "small", price: 17,
+...      quantity: 10, date : ISODate( "2021-01-13T05:08:13Z" ) },
+...    { _id: 7, name: "Vegan", size: "medium", price: 18,
+...      quantity: 10, date : ISODate( "2021-01-13T05:10:13Z" ) }
+... 
+... 
+... 
+... 
+... 
+... 
+Blog> 
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+Blog> 
+alethea@alelap150:~$ mongosh 
+Current Mongosh Log ID:	64523dbfc1ec3b7173aae47e
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.0
+Using MongoDB:		6.0.5
+Using Mongosh:		1.8.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-05-03T10:04:18.314+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-05-03T10:04:19.378+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2023-05-03T10:04:19.378+05:30: vm.max_map_count is too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> use Blog
+switched to db Blog
+Blog> db.orders.insertMany( [
+...    { _id: 0, name: "Pepperoni", size: "small", price: 19,
+...      quantity: 10, date: ISODate( "2021-03-13T08:14:30Z" ) },
+...    { _id: 1, name: "Pepperoni", size: "medium", price: 20,
+...      quantity: 20, date : ISODate( "2021-03-13T09:13:24Z" ) },
+...    { _id: 2, name: "Pepperoni", size: "large", price: 21,
+...      quantity: 30, date : ISODate( "2021-03-17T09:22:12Z" ) },
+...    { _id: 3, name: "Cheese", size: "small", price: 12,
+...      quantity: 15, date : ISODate( "2021-03-13T11:21:39.736Z" ) },
+...    { _id: 4, name: "Cheese", size: "medium", price: 13,
+...      quantity:50, date : ISODate( "2022-01-12T21:23:13.331Z" ) },
+...    { _id: 5, name: "Cheese", size: "large", price: 14,
+...      quantity: 10, date : ISODate( "2022-01-12T05:08:13Z" ) },
+...    { _id: 6, name: "Vegan", size: "small", price: 17,
+...      quantity: 10, date : ISODate( "2021-01-13T05:08:13Z" ) },
+...    { _id: 7, name: "Vegan", size: "medium", price: 18,
+...      quantity: 10, date : ISODate( "2021-01-13T05:10:13Z" ) }
+... ] )
+{
+  acknowledged: true,
+  insertedIds: { '0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7 }
+}
+Blog> show collections
+blogs
+orders
+Blog> db.orders
+db.orders
+
+Blog> db.orders.find
+db.orders.find               db.orders.findOne            db.orders.findOneAndDelete   db.orders.findOneAndReplace  db.orders.findOneAndUpdate
+
+Blog> db.orders.find().pr
+db.orders.find().pretty      db.orders.find().projection
+
+Blog> db.orders.find().pretty()
+[
+  {
+    _id: 0,
+    name: 'Pepperoni',
+    size: 'small',
+    price: 19,
+    quantity: 10,
+    date: ISODate("2021-03-13T08:14:30.000Z")
+  },
+  {
+    _id: 1,
+    name: 'Pepperoni',
+    size: 'medium',
+    price: 20,
+    quantity: 20,
+    date: ISODate("2021-03-13T09:13:24.000Z")
+  },
+  {
+    _id: 2,
+    name: 'Pepperoni',
+    size: 'large',
+    price: 21,
+    quantity: 30,
+    date: ISODate("2021-03-17T09:22:12.000Z")
+  },
+  {
+    _id: 3,
+    name: 'Cheese',
+    size: 'small',
+    price: 12,
+    quantity: 15,
+    date: ISODate("2021-03-13T11:21:39.736Z")
+  },
+  {
+    _id: 4,
+    name: 'Cheese',
+    size: 'medium',
+    price: 13,
+    quantity: 50,
+    date: ISODate("2022-01-12T21:23:13.331Z")
+  },
+  {
+    _id: 5,
+    name: 'Cheese',
+    size: 'large',
+    price: 14,
+    quantity: 10,
+    date: ISODate("2022-01-12T05:08:13.000Z")
+  },
+  {
+    _id: 6,
+    name: 'Vegan',
+    size: 'small',
+    price: 17,
+    quantity: 10,
+    date: ISODate("2021-01-13T05:08:13.000Z")
+  },
+  {
+    _id: 7,
+    name: 'Vegan',
+    size: 'medium',
+    price: 18,
+    quantity: 10,
+    date: ISODate("2021-01-13T05:10:13.000Z")
+  }
+]
+Blog> db.orders.find({name:"Vegan"})
+[
+  {
+    _id: 6,
+    name: 'Vegan',
+    size: 'small',
+    price: 17,
+    quantity: 10,
+    date: ISODate("2021-01-13T05:08:13.000Z")
+  },
+  {
+    _id: 7,
+    name: 'Vegan',
+    size: 'medium',
+    price: 18,
+    quantity: 10,
+    date: ISODate("2021-01-13T05:10:13.000Z")
+  }
+]
+Blog> db.orders.findOne({name:"Vegan"})
+{
+  _id: 6,
+  name: 'Vegan',
+  size: 'small',
+  price: 17,
+  quantity: 10,
+  date: ISODate("2021-01-13T05:08:13.000Z")
+}
+Blog> db.orders.aggregate({$match})
+db.orders.aggregate({$match
+
+Blog> db.orders.aggregate([{$match:{name:"Cheese"}}])
+[
+  {
+    _id: 3,
+    name: 'Cheese',
+    size: 'small',
+    price: 12,
+    quantity: 15,
+    date: ISODate("2021-03-13T11:21:39.736Z")
+  },
+  {
+    _id: 4,
+    name: 'Cheese',
+    size: 'medium',
+    price: 13,
+    quantity: 50,
+    date: ISODate("2022-01-12T21:23:13.331Z")
+  },
+  {
+    _id: 5,
+    name: 'Cheese',
+    size: 'large',
+    price: 14,
+    quantity: 10,
+    date: ISODate("2022-01-12T05:08:13.000Z")
+  }
+]
+Blog> db.orders.aggregate([{$match:{quantity:{$gt:15}}}])
+[
+  {
+    _id: 1,
+    name: 'Pepperoni',
+    size: 'medium',
+    price: 20,
+    quantity: 20,
+    date: ISODate("2021-03-13T09:13:24.000Z")
+  },
+  {
+    _id: 2,
+    name: 'Pepperoni',
+    size: 'large',
+    price: 21,
+    quantity: 30,
+    date: ISODate("2021-03-17T09:22:12.000Z")
+  },
+  {
+    _id: 4,
+    name: 'Cheese',
+    size: 'medium',
+    price: 13,
+    quantity: 50,
+    date: ISODate("2022-01-12T21:23:13.331Z")
+  }
+]
+Blog> db.orders.aggregate([{$group:{_id:"$name"}}])
+[ { _id: 'Cheese' }, { _id: 'Pepperoni' }, { _id: 'Vegan' } ]
+Blog> 
+
+Blog> db.orders.aggregate([{$group:{_id:"$name",TotalQuantity:{$sum:"$quamtity"}}}])
+[
+  { _id: 'Cheese', TotalQuantity: 0 },
+  { _id: 'Pepperoni', TotalQuantity: 0 },
+  { _id: 'Vegan', TotalQuantity: 0 }
+]
+Blog> db.orders.aggregate([{$group:{_id:"$name",TotalQuantity:{$sum:"$quantity"}}}])
+[
+  { _id: 'Cheese', TotalQuantity: 75 },
+  { _id: 'Vegan', TotalQuantity: 20 },
+  { _id: 'Pepperoni', TotalQuantity: 60 }
+]
+Blog> db.orders.aggregate([{$group:{_id:"$name",TotalQuantity:{$sum:"$quantity"}}}])
+[
+  { _id: 'Cheese', TotalQuantity: 75 },
+  { _id: 'Vegan', TotalQuantity: 20 },
+  { _id: 'Pepperoni', TotalQuantity: 60 }
+]
+Blog> db.orders.aggregate([{$group:{_id:"$name",TotalQuantity:{$avg:"$price"}}}])
+[
+  { _id: 'Cheese', TotalQuantity: 13 },
+  { _id: 'Pepperoni', TotalQuantity: 20 },
+  { _id: 'Vegan', TotalQuantity: 17.5 }
+]
+Blog> db.orders.aggregate([{$group:{_id:"$name",TotalQuantity:{$avg:"$price"}}}])
+[
+  { _id: 'Cheese', TotalQuantity: 13 },
+  { _id: 'Pepperoni', TotalQuantity: 20 },
+  { _id: 'Vegan', TotalQuantity: 17.5 }
+]
+Blog> db.orders.aggregate[{$match:{size:"medium"}}]
+
+Blog> db.orders.aggregate[{$match:{size:"medium"}}]
+
+Blog> db.orders.aggregate[{$match:{size:"medium"}}]
+
+Blog> db.orders.aggregate[{$match:{size:"medium"}}]
+
+Blog> db.orders.aggregate([{$match:{size:"medium"}}])
+[
+  {
+    _id: 1,
+    name: 'Pepperoni',
+    size: 'medium',
+    price: 20,
+    quantity: 20,
+    date: ISODate("2021-03-13T09:13:24.000Z")
+  },
+  {
+    _id: 4,
+    name: 'Cheese',
+    size: 'medium',
+    price: 13,
+    quantity: 50,
+    date: ISODate("2022-01-12T21:23:13.331Z")
+  },
+  {
+    _id: 7,
+    name: 'Vegan',
+    size: 'medium',
+    price: 18,
+    quantity: 10,
+    date: ISODate("2021-01-13T05:10:13.000Z")
+  }
+]
+Blog> db.orders.aggregate([{$match:{size:"medium"}},{$group:{_id:"$name"}}])
+[ { _id: 'Cheese' }, { _id: 'Pepperoni' }, { _id: 'Vegan' } ]
+Blog> db.orders.aggregate([{$match:{size:"medium"}},{$group:{_id:"$name"},avgPrice:{$avg:"$price"}}])
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+Blog> db.orders.aggregate([{$match:{size:"medium"}},{$group:{_id:"$name",avgPrice:{$avg:"$price"}}}])
+[
+  { _id: 'Cheese', avgPrice: 13 },
+  { _id: 'Pepperoni', avgPrice: 20 },
+  { _id: 'Vegan', avgPrice: 18 }
+]
+Blog> db.orders.aggregate([{$match:{size:"medium"}},{$group:{_id:"$name",avgPrice:{$avg:"$price"}}}])
+[
+  { _id: 'Cheese', avgPrice: 13 },
+  { _id: 'Pepperoni', avgPrice: 20 },
+  { _id: 'Vegan', avgPrice: 18 }
+]
+Blog> db.orders.aggregate([{$match:{size:"medium"}}])
+[
+  {
+    _id: 1,
+    name: 'Pepperoni',
+    size: 'medium',
+    price: 20,
+    quantity: 20,
+    date: ISODate("2021-03-13T09:13:24.000Z")
+  },
+  {
+    _id: 4,
+    name: 'Cheese',
+    size: 'medium',
+    price: 13,
+    quantity: 50,
+    date: ISODate("2022-01-12T21:23:13.331Z")
+  },
+  {
+    _id: 7,
+    name: 'Vegan',
+    size: 'medium',
+    price: 18,
+    quantity: 10,
+    date: ISODate("2021-01-13T05:10:13.000Z")
+  }
+]
+Blog> db.orders.aggregate([{$match:{size:"medium"}},{$group:{_id:"$name",totalPrice:{$sum:"$price"}}}])
+[
+  { _id: 'Cheese', totalPrice: 13 },
+  { _id: 'Pepperoni', totalPrice: 20 },
+  { _id: 'Vegan', totalPrice: 18 }
+]
+Blog> show collections
+blogs
+orders
+zips
+Blog> db.zips.find()
+[
+  {
+    _id: '01008',
+    city: 'BLANDFORD',
+    loc: [ -72.936114, 42.182949 ],
+    pop: 1240,
+    state: 'MA'
+  },
+  {
+    _id: '01012',
+    city: 'CHESTERFIELD',
+    loc: [ -72.833309, 42.38167 ],
+    pop: 177,
+    state: 'MA'
+  },
+  {
+    _id: '01020',
+    city: 'CHICOPEE',
+    loc: [ -72.576142, 42.176443 ],
+    pop: 31495,
+    state: 'MA'
+  },
+  {
+    _id: '01011',
+    city: 'CHESTER',
+    loc: [ -72.988761, 42.279421 ],
+    pop: 1688,
+    state: 'MA'
+  },
+  {
+    _id: '01001',
+    city: 'AGAWAM',
+    loc: [ -72.622739, 42.070206 ],
+    pop: 15338,
+    state: 'MA'
+  },
+  {
+    _id: '01022',
+    city: 'WESTOVER AFB',
+    loc: [ -72.558657, 42.196672 ],
+    pop: 1764,
+    state: 'MA'
+  },
+  {
+    _id: '01027',
+    city: 'MOUNT TOM',
+    loc: [ -72.679921, 42.264319 ],
+    pop: 16864,
+    state: 'MA'
+  },
+  {
+    _id: '01002',
+    city: 'CUSHMAN',
+    loc: [ -72.51565, 42.377017 ],
+    pop: 36963,
+    state: 'MA'
+  },
+  {
+    _id: '01028',
+    city: 'EAST LONGMEADOW',
+    loc: [ -72.505565, 42.067203 ],
+    pop: 13367,
+    state: 'MA'
+  },
+  {
+    _id: '01007',
+    city: 'BELCHERTOWN',
+    loc: [ -72.410953, 42.275103 ],
+    pop: 10579,
+    state: 'MA'
+  },
+  {
+    _id: '01030',
+    city: 'FEEDING HILLS',
+    loc: [ -72.675077, 42.07182 ],
+    pop: 11985,
+    state: 'MA'
+  },
+  {
+    _id: '01031',
+    city: 'GILBERTVILLE',
+    loc: [ -72.198585, 42.332194 ],
+    pop: 2385,
+    state: 'MA'
+  },
+  {
+    _id: '01032',
+    city: 'GOSHEN',
+    loc: [ -72.844092, 42.466234 ],
+    pop: 122,
+    state: 'MA'
+  },
+  {
+    _id: '01026',
+    city: 'CUMMINGTON',
+    loc: [ -72.905767, 42.435296 ],
+    pop: 1484,
+    state: 'MA'
+  },
+  {
+    _id: '01033',
+    city: 'GRANBY',
+    loc: [ -72.520001, 42.255704 ],
+    pop: 5526,
+    state: 'MA'
+  },
+  {
+    _id: '01034',
+    city: 'TOLLAND',
+    loc: [ -72.908793, 42.070234 ],
+    pop: 1652,
+    state: 'MA'
+  },
+  {
+    _id: '01035',
+    city: 'HADLEY',
+    loc: [ -72.571499, 42.36062 ],
+    pop: 4231,
+    state: 'MA'
+  },
+  {
+    _id: '01013',
+    city: 'CHICOPEE',
+    loc: [ -72.607962, 42.162046 ],
+    pop: 23396,
+    state: 'MA'
+  },
+  {
+    _id: '01036',
+    city: 'HAMPDEN',
+    loc: [ -72.431823, 42.064756 ],
+    pop: 4709,
+    state: 'MA'
+  },
+  {
+    _id: '01038',
+    city: 'HATFIELD',
+    loc: [ -72.616735, 42.38439 ],
+    pop: 3184,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> it
+[
+  {
+    _id: '01005',
+    city: 'BARRE',
+    loc: [ -72.108354, 42.409698 ],
+    pop: 4546,
+    state: 'MA'
+  },
+  {
+    _id: '01039',
+    city: 'HAYDENVILLE',
+    loc: [ -72.703178, 42.381799 ],
+    pop: 1387,
+    state: 'MA'
+  },
+  {
+    _id: '01040',
+    city: 'HOLYOKE',
+    loc: [ -72.626193, 42.202007 ],
+    pop: 43704,
+    state: 'MA'
+  },
+  {
+    _id: '01050',
+    city: 'HUNTINGTON',
+    loc: [ -72.873341, 42.265301 ],
+    pop: 2084,
+    state: 'MA'
+  },
+  {
+    _id: '01010',
+    city: 'BRIMFIELD',
+    loc: [ -72.188455, 42.116543 ],
+    pop: 3706,
+    state: 'MA'
+  },
+  {
+    _id: '01053',
+    city: 'LEEDS',
+    loc: [ -72.703403, 42.354292 ],
+    pop: 1350,
+    state: 'MA'
+  },
+  {
+    _id: '01056',
+    city: 'LUDLOW',
+    loc: [ -72.471012, 42.172823 ],
+    pop: 18820,
+    state: 'MA'
+  },
+  {
+    _id: '01054',
+    city: 'LEVERETT',
+    loc: [ -72.499334, 42.46823 ],
+    pop: 1748,
+    state: 'MA'
+  },
+  {
+    _id: '01060',
+    city: 'FLORENCE',
+    loc: [ -72.654245, 42.324662 ],
+    pop: 27939,
+    state: 'MA'
+  },
+  {
+    _id: '01068',
+    city: 'OAKHAM',
+    loc: [ -72.051265, 42.348033 ],
+    pop: 1503,
+    state: 'MA'
+  },
+  {
+    _id: '01057',
+    city: 'MONSON',
+    loc: [ -72.319634, 42.101017 ],
+    pop: 8194,
+    state: 'MA'
+  },
+  {
+    _id: '01069',
+    city: 'PALMER',
+    loc: [ -72.328785, 42.176233 ],
+    pop: 9778,
+    state: 'MA'
+  },
+  {
+    _id: '01071',
+    city: 'RUSSELL',
+    loc: [ -72.840343, 42.147063 ],
+    pop: 608,
+    state: 'MA'
+  },
+  {
+    _id: '01070',
+    city: 'PLAINFIELD',
+    loc: [ -72.918289, 42.514393 ],
+    pop: 571,
+    state: 'MA'
+  },
+  {
+    _id: '01077',
+    city: 'SOUTHWICK',
+    loc: [ -72.770588, 42.051099 ],
+    pop: 7667,
+    state: 'MA'
+  },
+  {
+    _id: '01081',
+    city: 'WALES',
+    loc: [ -72.204592, 42.062734 ],
+    pop: 1732,
+    state: 'MA'
+  },
+  {
+    _id: '01073',
+    city: 'SOUTHAMPTON',
+    loc: [ -72.719381, 42.224697 ],
+    pop: 4478,
+    state: 'MA'
+  },
+  {
+    _id: '01085',
+    city: 'MONTGOMERY',
+    loc: [ -72.754318, 42.129484 ],
+    pop: 40117,
+    state: 'MA'
+  },
+  {
+    _id: '01089',
+    city: 'WEST SPRINGFIELD',
+    loc: [ -72.641109, 42.115066 ],
+    pop: 27537,
+    state: 'MA'
+  },
+  {
+    _id: '01092',
+    city: 'WEST WARREN',
+    loc: [ -72.203639, 42.20734 ],
+    pop: 4441,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> 
+
+Blog> db.zips.find()
+[
+  {
+    _id: '01008',
+    city: 'BLANDFORD',
+    loc: [ -72.936114, 42.182949 ],
+    pop: 1240,
+    state: 'MA'
+  },
+  {
+    _id: '01012',
+    city: 'CHESTERFIELD',
+    loc: [ -72.833309, 42.38167 ],
+    pop: 177,
+    state: 'MA'
+  },
+  {
+    _id: '01020',
+    city: 'CHICOPEE',
+    loc: [ -72.576142, 42.176443 ],
+    pop: 31495,
+    state: 'MA'
+  },
+  {
+    _id: '01011',
+    city: 'CHESTER',
+    loc: [ -72.988761, 42.279421 ],
+    pop: 1688,
+    state: 'MA'
+  },
+  {
+    _id: '01001',
+    city: 'AGAWAM',
+    loc: [ -72.622739, 42.070206 ],
+    pop: 15338,
+    state: 'MA'
+  },
+  {
+    _id: '01022',
+    city: 'WESTOVER AFB',
+    loc: [ -72.558657, 42.196672 ],
+    pop: 1764,
+    state: 'MA'
+  },
+  {
+    _id: '01027',
+    city: 'MOUNT TOM',
+    loc: [ -72.679921, 42.264319 ],
+    pop: 16864,
+    state: 'MA'
+  },
+  {
+    _id: '01002',
+    city: 'CUSHMAN',
+    loc: [ -72.51565, 42.377017 ],
+    pop: 36963,
+    state: 'MA'
+  },
+  {
+    _id: '01028',
+    city: 'EAST LONGMEADOW',
+    loc: [ -72.505565, 42.067203 ],
+    pop: 13367,
+    state: 'MA'
+  },
+  {
+    _id: '01007',
+    city: 'BELCHERTOWN',
+    loc: [ -72.410953, 42.275103 ],
+    pop: 10579,
+    state: 'MA'
+  },
+  {
+    _id: '01030',
+    city: 'FEEDING HILLS',
+    loc: [ -72.675077, 42.07182 ],
+    pop: 11985,
+    state: 'MA'
+  },
+  {
+    _id: '01031',
+    city: 'GILBERTVILLE',
+    loc: [ -72.198585, 42.332194 ],
+    pop: 2385,
+    state: 'MA'
+  },
+  {
+    _id: '01032',
+    city: 'GOSHEN',
+    loc: [ -72.844092, 42.466234 ],
+    pop: 122,
+    state: 'MA'
+  },
+  {
+    _id: '01026',
+    city: 'CUMMINGTON',
+    loc: [ -72.905767, 42.435296 ],
+    pop: 1484,
+    state: 'MA'
+  },
+  {
+    _id: '01033',
+    city: 'GRANBY',
+    loc: [ -72.520001, 42.255704 ],
+    pop: 5526,
+    state: 'MA'
+  },
+  {
+    _id: '01034',
+    city: 'TOLLAND',
+    loc: [ -72.908793, 42.070234 ],
+    pop: 1652,
+    state: 'MA'
+  },
+  {
+    _id: '01035',
+    city: 'HADLEY',
+    loc: [ -72.571499, 42.36062 ],
+    pop: 4231,
+    state: 'MA'
+  },
+  {
+    _id: '01013',
+    city: 'CHICOPEE',
+    loc: [ -72.607962, 42.162046 ],
+    pop: 23396,
+    state: 'MA'
+  },
+  {
+    _id: '01036',
+    city: 'HAMPDEN',
+    loc: [ -72.431823, 42.064756 ],
+    pop: 4709,
+    state: 'MA'
+  },
+  {
+    _id: '01038',
+    city: 'HATFIELD',
+    loc: [ -72.616735, 42.38439 ],
+    pop: 3184,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> it
+[
+  {
+    _id: '01005',
+    city: 'BARRE',
+    loc: [ -72.108354, 42.409698 ],
+    pop: 4546,
+    state: 'MA'
+  },
+  {
+    _id: '01039',
+    city: 'HAYDENVILLE',
+    loc: [ -72.703178, 42.381799 ],
+    pop: 1387,
+    state: 'MA'
+  },
+  {
+    _id: '01040',
+    city: 'HOLYOKE',
+    loc: [ -72.626193, 42.202007 ],
+    pop: 43704,
+    state: 'MA'
+  },
+  {
+    _id: '01050',
+    city: 'HUNTINGTON',
+    loc: [ -72.873341, 42.265301 ],
+    pop: 2084,
+    state: 'MA'
+  },
+  {
+    _id: '01010',
+    city: 'BRIMFIELD',
+    loc: [ -72.188455, 42.116543 ],
+    pop: 3706,
+    state: 'MA'
+  },
+  {
+    _id: '01053',
+    city: 'LEEDS',
+    loc: [ -72.703403, 42.354292 ],
+    pop: 1350,
+    state: 'MA'
+  },
+  {
+    _id: '01056',
+    city: 'LUDLOW',
+    loc: [ -72.471012, 42.172823 ],
+    pop: 18820,
+    state: 'MA'
+  },
+  {
+    _id: '01054',
+    city: 'LEVERETT',
+    loc: [ -72.499334, 42.46823 ],
+    pop: 1748,
+    state: 'MA'
+  },
+  {
+    _id: '01060',
+    city: 'FLORENCE',
+    loc: [ -72.654245, 42.324662 ],
+    pop: 27939,
+    state: 'MA'
+  },
+  {
+    _id: '01068',
+    city: 'OAKHAM',
+    loc: [ -72.051265, 42.348033 ],
+    pop: 1503,
+    state: 'MA'
+  },
+  {
+    _id: '01057',
+    city: 'MONSON',
+    loc: [ -72.319634, 42.101017 ],
+    pop: 8194,
+    state: 'MA'
+  },
+  {
+    _id: '01069',
+    city: 'PALMER',
+    loc: [ -72.328785, 42.176233 ],
+    pop: 9778,
+    state: 'MA'
+  },
+  {
+    _id: '01071',
+    city: 'RUSSELL',
+    loc: [ -72.840343, 42.147063 ],
+    pop: 608,
+    state: 'MA'
+  },
+  {
+    _id: '01070',
+    city: 'PLAINFIELD',
+    loc: [ -72.918289, 42.514393 ],
+    pop: 571,
+    state: 'MA'
+  },
+  {
+    _id: '01077',
+    city: 'SOUTHWICK',
+    loc: [ -72.770588, 42.051099 ],
+    pop: 7667,
+    state: 'MA'
+  },
+  {
+    _id: '01081',
+    city: 'WALES',
+    loc: [ -72.204592, 42.062734 ],
+    pop: 1732,
+    state: 'MA'
+  },
+  {
+    _id: '01073',
+    city: 'SOUTHAMPTON',
+    loc: [ -72.719381, 42.224697 ],
+    pop: 4478,
+    state: 'MA'
+  },
+  {
+    _id: '01085',
+    city: 'MONTGOMERY',
+    loc: [ -72.754318, 42.129484 ],
+    pop: 40117,
+    state: 'MA'
+  },
+  {
+    _id: '01089',
+    city: 'WEST SPRINGFIELD',
+    loc: [ -72.641109, 42.115066 ],
+    pop: 27537,
+    state: 'MA'
+  },
+  {
+    _id: '01092',
+    city: 'WEST WARREN',
+    loc: [ -72.203639, 42.20734 ],
+    pop: 4441,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> it
+[
+  {
+    _id: '01095',
+    city: 'WILBRAHAM',
+    loc: [ -72.446415, 42.124506 ],
+    pop: 12635,
+    state: 'MA'
+  },
+  {
+    _id: '01096',
+    city: 'WILLIAMSBURG',
+    loc: [ -72.777989, 42.408522 ],
+    pop: 2295,
+    state: 'MA'
+  },
+  {
+    _id: '01098',
+    city: 'WORTHINGTON',
+    loc: [ -72.931427, 42.384293 ],
+    pop: 877,
+    state: 'MA'
+  },
+  {
+    _id: '01104',
+    city: 'SPRINGFIELD',
+    loc: [ -72.577769, 42.128848 ],
+    pop: 22115,
+    state: 'MA'
+  },
+  {
+    _id: '01103',
+    city: 'SPRINGFIELD',
+    loc: [ -72.588735, 42.1029 ],
+    pop: 2323,
+    state: 'MA'
+  },
+  {
+    _id: '01106',
+    city: 'LONGMEADOW',
+    loc: [ -72.5676, 42.050658 ],
+    pop: 15688,
+    state: 'MA'
+  },
+  {
+    _id: '01082',
+    city: 'WARE',
+    loc: [ -72.258285, 42.261831 ],
+    pop: 9808,
+    state: 'MA'
+  },
+  {
+    _id: '01072',
+    city: 'SHUTESBURY',
+    loc: [ -72.421342, 42.481968 ],
+    pop: 1533,
+    state: 'MA'
+  },
+  {
+    _id: '01105',
+    city: 'SPRINGFIELD',
+    loc: [ -72.578312, 42.099931 ],
+    pop: 14970,
+    state: 'MA'
+  },
+  {
+    _id: '01080',
+    city: 'THREE RIVERS',
+    loc: [ -72.362352, 42.181894 ],
+    pop: 2425,
+    state: 'MA'
+  },
+  {
+    _id: '01075',
+    city: 'SOUTH HADLEY',
+    loc: [ -72.581137, 42.237537 ],
+    pop: 16699,
+    state: 'MA'
+  },
+  {
+    _id: '01109',
+    city: 'SPRINGFIELD',
+    loc: [ -72.554349, 42.114455 ],
+    pop: 32635,
+    state: 'MA'
+  },
+  {
+    _id: '01151',
+    city: 'INDIAN ORCHARD',
+    loc: [ -72.505048, 42.153225 ],
+    pop: 8702,
+    state: 'MA'
+  },
+  {
+    _id: '01107',
+    city: 'SPRINGFIELD',
+    loc: [ -72.606544, 42.117907 ],
+    pop: 12739,
+    state: 'MA'
+  },
+  {
+    _id: '01129',
+    city: 'SPRINGFIELD',
+    loc: [ -72.487622, 42.122263 ],
+    pop: 6831,
+    state: 'MA'
+  },
+  {
+    _id: '01220',
+    city: 'ADAMS',
+    loc: [ -73.117225, 42.622319 ],
+    pop: 9901,
+    state: 'MA'
+  },
+  {
+    _id: '01201',
+    city: 'PITTSFIELD',
+    loc: [ -73.247088, 42.453086 ],
+    pop: 50655,
+    state: 'MA'
+  },
+  {
+    _id: '01222',
+    city: 'ASHLEY FALLS',
+    loc: [ -73.320195, 42.059552 ],
+    pop: 561,
+    state: 'MA'
+  },
+  {
+    _id: '01108',
+    city: 'SPRINGFIELD',
+    loc: [ -72.558432, 42.085314 ],
+    pop: 25519,
+    state: 'MA'
+  },
+  {
+    _id: '01223',
+    city: 'BECKET',
+    loc: [ -73.120325, 42.359363 ],
+    pop: 1070,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> db.zips.aggregate([{$match:"state"}])
+MongoServerError: the match filter must be an expression in an object
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"pop"}}}])
+[
+  { _id: 'MA', totalPop: 0 },
+  { _id: 'MS', totalPop: 0 },
+  { _id: 'OK', totalPop: 0 },
+  { _id: 'AZ', totalPop: 0 },
+  { _id: 'TN', totalPop: 0 },
+  { _id: 'AL', totalPop: 0 },
+  { _id: 'NC', totalPop: 0 },
+  { _id: 'IN', totalPop: 0 },
+  { _id: 'MI', totalPop: 0 },
+  { _id: 'SD', totalPop: 0 },
+  { _id: 'IL', totalPop: 0 },
+  { _id: 'PA', totalPop: 0 },
+  { _id: 'WY', totalPop: 0 },
+  { _id: 'UT', totalPop: 0 },
+  { _id: 'DE', totalPop: 0 },
+  { _id: 'ND', totalPop: 0 },
+  { _id: 'LA', totalPop: 0 },
+  { _id: 'MD', totalPop: 0 },
+  { _id: 'SC', totalPop: 0 },
+  { _id: 'TX', totalPop: 0 }
+]
+Type "it" for more
+Blog> 
+
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}}])
+[
+  { _id: 'MA', totalPop: 6016425 },
+  { _id: 'MS', totalPop: 2573216 },
+  { _id: 'OK', totalPop: 3145585 },
+  { _id: 'AZ', totalPop: 3665228 },
+  { _id: 'TN', totalPop: 4876457 },
+  { _id: 'AL', totalPop: 4040587 },
+  { _id: 'NC', totalPop: 6628637 },
+  { _id: 'IN', totalPop: 5544136 },
+  { _id: 'MI', totalPop: 9295297 },
+  { _id: 'SD', totalPop: 695397 },
+  { _id: 'IL', totalPop: 11427576 },
+  { _id: 'PA', totalPop: 11881643 },
+  { _id: 'WY', totalPop: 453528 },
+  { _id: 'UT', totalPop: 1722850 },
+  { _id: 'DE', totalPop: 666168 },
+  { _id: 'ND', totalPop: 638272 },
+  { _id: 'LA', totalPop: 4217595 },
+  { _id: 'MD', totalPop: 4781379 },
+  { _id: 'SC', totalPop: 3486703 },
+  { _id: 'TX', totalPop: 16984601 }
+]
+Type "it" for more
+Blog> it
+[
+  { _id: 'OH', totalPop: 10846517 },
+  { _id: 'WI', totalPop: 4891769 },
+  { _id: 'CO', totalPop: 3293755 },
+  { _id: 'NM', totalPop: 1515069 },
+  { _id: 'NV', totalPop: 1201833 },
+  { _id: 'CA', totalPop: 29754890 },
+  { _id: 'KS', totalPop: 2475285 },
+  { _id: 'IA', totalPop: 2776420 },
+  { _id: 'HI', totalPop: 1108229 },
+  { _id: 'OR', totalPop: 2842321 },
+  { _id: 'VT', totalPop: 562758 },
+  { _id: 'GA', totalPop: 6478216 },
+  { _id: 'NH', totalPop: 1109252 },
+  { _id: 'ME', totalPop: 1226648 },
+  { _id: 'MN', totalPop: 4372982 },
+  { _id: 'MO', totalPop: 5110648 },
+  { _id: 'VA', totalPop: 6181479 },
+  { _id: 'AR', totalPop: 2350725 },
+  { _id: 'WA', totalPop: 4866692 },
+  { _id: 'AK', totalPop: 544698 }
+]
+Type "it" for more
+Blog> it
+[
+  { _id: 'DC', totalPop: 606900 },
+  { _id: 'KY', totalPop: 3675484 },
+  { _id: 'NE', totalPop: 1578139 },
+  { _id: 'MT', totalPop: 798948 },
+  { _id: 'ID', totalPop: 1006749 },
+  { _id: 'NJ', totalPop: 7730188 },
+  { _id: 'RI', totalPop: 1003218 },
+  { _id: 'NY', totalPop: 17990402 },
+  { _id: 'CT', totalPop: 3287116 },
+  { _id: 'WV', totalPop: 1793146 },
+  { _id: 'FL', totalPop: 12686644 }
+]
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},$sort:{totalPop:-1}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:71)
+
+> 1 | db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},$sort:{totalPop:-1}])
+    |                                                                        ^
+  2 |
+
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},{$sort:{totalPop:-1}}])
+[
+  { _id: 'CA', totalPop: 29754890 },
+  { _id: 'NY', totalPop: 17990402 },
+  { _id: 'TX', totalPop: 16984601 },
+  { _id: 'FL', totalPop: 12686644 },
+  { _id: 'PA', totalPop: 11881643 },
+  { _id: 'IL', totalPop: 11427576 },
+  { _id: 'OH', totalPop: 10846517 },
+  { _id: 'MI', totalPop: 9295297 },
+  { _id: 'NJ', totalPop: 7730188 },
+  { _id: 'NC', totalPop: 6628637 },
+  { _id: 'GA', totalPop: 6478216 },
+  { _id: 'VA', totalPop: 6181479 },
+  { _id: 'MA', totalPop: 6016425 },
+  { _id: 'IN', totalPop: 5544136 },
+  { _id: 'MO', totalPop: 5110648 },
+  { _id: 'WI', totalPop: 4891769 },
+  { _id: 'TN', totalPop: 4876457 },
+  { _id: 'WA', totalPop: 4866692 },
+  { _id: 'MD', totalPop: 4781379 },
+  { _id: 'MN', totalPop: 4372982 }
+]
+Type "it" for more
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},{$sort:{totalPop:-1}},{$limit:1}])
+[ { _id: 'CA', totalPop: 29754890 } ]
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},{$sort:{totalPop:1}},{$limit:1}])
+[ { _id: 'WY', totalPop: 453528 } ]
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},{$match:{$gt:100000}}])
+MongoServerError: unknown top level operator: $gt. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},{$match:{totalPop:{$gt:100000}}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:97)
+
+> 1 | db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},{$match:{totalPop:{$gt:100000}}])
+    |                                                                                                  ^
+  2 |
+
+Blog> db.zips.aggregate([{$group:{_id:"$state",totalPop:{$sum:"$pop"}}},{$match:{totalPop:{$gt:100000}}}])
+[
+  { _id: 'MA', totalPop: 6016425 },
+  { _id: 'MS', totalPop: 2573216 },
+  { _id: 'OK', totalPop: 3145585 },
+  { _id: 'AZ', totalPop: 3665228 },
+  { _id: 'TN', totalPop: 4876457 },
+  { _id: 'AL', totalPop: 4040587 },
+  { _id: 'NC', totalPop: 6628637 },
+  { _id: 'IN', totalPop: 5544136 },
+  { _id: 'MI', totalPop: 9295297 },
+  { _id: 'SD', totalPop: 695397 },
+  { _id: 'IL', totalPop: 11427576 },
+  { _id: 'PA', totalPop: 11881643 },
+  { _id: 'WY', totalPop: 453528 },
+  { _id: 'UT', totalPop: 1722850 },
+  { _id: 'DE', totalPop: 666168 },
+  { _id: 'ND', totalPop: 638272 },
+  { _id: 'LA', totalPop: 4217595 },
+  { _id: 'MD', totalPop: 4781379 },
+  { _id: 'SC', totalPop: 3486703 },
+  { _id: 'TX', totalPop: 16984601 }
+]
+Type "it" for more
+Blog> it
+[
+  { _id: 'OH', totalPop: 10846517 },
+  { _id: 'WI', totalPop: 4891769 },
+  { _id: 'CO', totalPop: 3293755 },
+  { _id: 'NM', totalPop: 1515069 },
+  { _id: 'NV', totalPop: 1201833 },
+  { _id: 'CA', totalPop: 29754890 },
+  { _id: 'KS', totalPop: 2475285 },
+  { _id: 'IA', totalPop: 2776420 },
+  { _id: 'HI', totalPop: 1108229 },
+  { _id: 'OR', totalPop: 2842321 },
+  { _id: 'VT', totalPop: 562758 },
+  { _id: 'GA', totalPop: 6478216 },
+  { _id: 'NH', totalPop: 1109252 },
+  { _id: 'ME', totalPop: 1226648 },
+  { _id: 'MN', totalPop: 4372982 },
+  { _id: 'MO', totalPop: 5110648 },
+  { _id: 'VA', totalPop: 6181479 },
+  { _id: 'AR', totalPop: 2350725 },
+  { _id: 'WA', totalPop: 4866692 },
+  { _id: 'AK', totalPop: 544698 }
+]
+Type "it" for more
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"}}}])
+[
+  { _id: { state: 'MN', city: 'RICHFIELD' } },
+  { _id: { state: 'VT', city: 'READSBORO' } },
+  { _id: { state: 'MO', city: 'BARNETT' } },
+  { _id: { state: 'NY', city: 'BURDETT' } },
+  { _id: { state: 'MN', city: 'BOWLUS' } },
+  { _id: { state: 'CA', city: 'FORKS OF SALMON' } },
+  { _id: { state: 'WV', city: 'KASSON' } },
+  { _id: { state: 'NY', city: 'SWAIN' } },
+  { _id: { state: 'CA', city: 'SAN MARTIN' } },
+  { _id: { state: 'VT', city: 'GUILDHALL' } },
+  { _id: { state: 'FL', city: 'GREEN COVE SPRIN' } },
+  { _id: { state: 'NY', city: 'LEW BEACH' } },
+  { _id: { state: 'NH', city: 'WEST SPRINGFIELD' } },
+  { _id: { state: 'NY', city: 'TANNERSVILLE' } },
+  { _id: { state: 'OH', city: 'FOWLER' } },
+  { _id: { state: 'UT', city: 'ANETH' } },
+  { _id: { state: 'PA', city: 'ROBINSON' } },
+  { _id: { state: 'NC', city: 'TARBORO' } },
+  { _id: { state: 'NJ', city: 'VENTNOR CITY' } },
+  { _id: { state: 'AL', city: 'PIKE ROAD' } }
+]
+Type "it" for more
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},{{}}])
+[1]+  Stopped                 mongosh
+alethea@alelap150:~$ mongosh 
+Current Mongosh Log ID:	64527a58b4ffd241bf498877
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.0
+Using MongoDB:		6.0.5
+Using Mongosh:		1.8.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-05-03T10:04:18.314+05:30: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-05-03T10:04:19.378+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2023-05-03T10:04:19.378+05:30: vm.max_map_count is too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> cd d
+cd debugger             cd default              cd delete               cd do                   cd                      cd DBQuery              cd DBRef                cd DataView
+cd Date                 cd Decimal128           cd Double               cd db                   cd decodeURI            cd decodeURIComponent   cd dgram                cd diagnostics_channel
+cd disableTelemetry     cd dns                  cd domain
+
+test> use test
+already on db test
+test> show collections
+orders
+test> show dbs
+Blog           1.70 MiB
+UrlShortener  84.00 KiB
+admin         40.00 KiB
+config        96.00 KiB
+local         80.00 KiB
+test          40.00 KiB
+test> use Blog
+switched to db Blog
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},{pop:{$sum:"pop"}}])
+Uncaught:
+SyntaxError: Unexpected token (1:62)
+
+> 1 | db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},{pop:{$sum:"pop"}}])
+    |                                                               ^
+  2 |
+
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"pop"}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:78)
+
+> 1 | db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"pop"}])
+    |                                                                               ^
+  2 |
+
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"pop"}}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:79)
+
+> 1 | db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"pop"}}])
+    |                                                                                ^
+  2 |
+
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"pop"}}}])
+[
+  { _id: { state: 'NY', city: 'IONIA' }, pop: 0 },
+  { _id: { state: 'TX', city: 'KARNACK' }, pop: 0 },
+  { _id: { state: 'NJ', city: 'SOUTH BOUND BROO' }, pop: 0 },
+  { _id: { state: 'VT', city: 'CRAFTSBURY COMMO' }, pop: 0 },
+  { _id: { state: 'OH', city: 'POLK' }, pop: 0 },
+  { _id: { state: 'NY', city: 'PORT WASHINGTON' }, pop: 0 },
+  { _id: { state: 'PA', city: 'NEW ALBANY' }, pop: 0 },
+  { _id: { state: 'MI', city: 'UNIVERSITY CENTE' }, pop: 0 },
+  { _id: { state: 'VT', city: 'HUBBARDTON' }, pop: 0 },
+  { _id: { state: 'MT', city: 'POLEBRIDGE' }, pop: 0 },
+  { _id: { state: 'MO', city: 'LATHAM' }, pop: 0 },
+  { _id: { state: 'IA', city: 'LADORA' }, pop: 0 },
+  { _id: { state: 'CA', city: 'HOLLY PARK' }, pop: 0 },
+  { _id: { state: 'NY', city: 'BEACON' }, pop: 0 },
+  { _id: { state: 'OH', city: 'LUCASVILLE' }, pop: 0 },
+  { _id: { state: 'IN', city: 'ACTON' }, pop: 0 },
+  { _id: { state: 'IA', city: 'DOUGHERTY' }, pop: 0 },
+  { _id: { state: 'ND', city: 'WILLOW CITY' }, pop: 0 },
+  { _id: { state: 'LA', city: 'AMA' }, pop: 0 },
+  { _id: { state: 'OK', city: 'CUSTER CITY' }, pop: 0 }
+]
+Type "it" for more
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}])
+[
+  { _id: { state: 'VA', city: 'WARNER' }, pop: 37 },
+  { _id: { state: 'VA', city: 'SEAFORD' }, pop: 3009 },
+  { _id: { state: 'IA', city: 'LAWTON' }, pop: 1481 },
+  { _id: { state: 'IA', city: 'LYTTON' }, pop: 235 },
+  { _id: { state: 'MA', city: 'EAST WAREHAM' }, pop: 4778 },
+  { _id: { state: 'ME', city: 'BIRCH HARBOR' }, pop: 229 },
+  { _id: { state: 'MD', city: 'LEWISTOWN' }, pop: 35492 },
+  { _id: { state: 'OK', city: 'COLCORD' }, pop: 4202 },
+  { _id: { state: 'MN', city: 'GRAND MEADOW' }, pop: 1653 },
+  { _id: { state: 'TX', city: 'MORSE' }, pop: 169 },
+  { _id: { state: 'IN', city: 'VEVAY' }, pop: 3974 },
+  { _id: { state: 'NY', city: 'LAKE VIEW' }, pop: 4936 },
+  { _id: { state: 'TX', city: 'SIMMS' }, pop: 3617 },
+  { _id: { state: 'CA', city: 'OCEANO' }, pop: 6249 },
+  { _id: { state: 'ME', city: 'ABBOT VILLAGE' }, pop: 1193 },
+  { _id: { state: 'VA', city: 'VANSANT' }, pop: 4724 },
+  { _id: { state: 'NJ', city: 'MOUNT ROYAL' }, pop: 239 },
+  { _id: { state: 'NY', city: 'WOODSIDE' }, pop: 75894 },
+  { _id: { state: 'WV', city: 'ONEGO' }, pop: 233 },
+  { _id: { state: 'TX', city: 'IVANHOE' }, pop: 1004 }
+]
+Type "it" for more
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}},{$group:{_id:"$_id.state",avg:"$pop"}}])
+MongoServerError: The field 'avg' must be an accumulator object
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}},{$group:{_id:"$_id.state",$avg:"$pop"}}])
+MongoServerError: The field '$avg' must be an accumulator object
+Blog> db.zips.aggregate([{$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}},{$group:{_id:"$_id.state",avg:{$avg:"$pop"}}}])
+[
+  { _id: 'LA', avg: 10465.496277915632 },
+  { _id: 'MT', avg: 2593.987012987013 },
+  { _id: 'NM', avg: 5872.360465116279 },
+  { _id: 'ND', avg: 1645.0309278350514 },
+  { _id: 'PA', avg: 8679.067202337472 },
+  { _id: 'WY', avg: 3384.5373134328356 },
+  { _id: 'UT', avg: 9518.508287292818 },
+  { _id: 'AK', avg: 2976.4918032786886 },
+  { _id: 'IN', avg: 9271.130434782608 },
+  { _id: 'NC', avg: 10622.815705128205 },
+  { _id: 'MI', avg: 12087.512353706112 },
+  { _id: 'TN', avg: 9656.350495049504 },
+  { _id: 'IL', avg: 9954.334494773519 },
+  { _id: 'OK', avg: 6155.743639921722 },
+  { _id: 'MS', avg: 7524.023391812865 },
+  { _id: 'MA', avg: 14855.37037037037 },
+  { _id: 'GA', avg: 11547.62210338681 },
+  { _id: 'AZ', avg: 20591.16853932584 },
+  { _id: 'OR', avg: 8262.561046511628 },
+  { _id: 'AL', avg: 7907.2152641878665 }
+]
+Type "it" for more
+Blog> db.zips.find()
+[
+  {
+    _id: '01008',
+    city: 'BLANDFORD',
+    loc: [ -72.936114, 42.182949 ],
+    pop: 1240,
+    state: 'MA'
+  },
+  {
+    _id: '01012',
+    city: 'CHESTERFIELD',
+    loc: [ -72.833309, 42.38167 ],
+    pop: 177,
+    state: 'MA'
+  },
+  {
+    _id: '01020',
+    city: 'CHICOPEE',
+    loc: [ -72.576142, 42.176443 ],
+    pop: 31495,
+    state: 'MA'
+  },
+  {
+    _id: '01011',
+    city: 'CHESTER',
+    loc: [ -72.988761, 42.279421 ],
+    pop: 1688,
+    state: 'MA'
+  },
+  {
+    _id: '01001',
+    city: 'AGAWAM',
+    loc: [ -72.622739, 42.070206 ],
+    pop: 15338,
+    state: 'MA'
+  },
+  {
+    _id: '01022',
+    city: 'WESTOVER AFB',
+    loc: [ -72.558657, 42.196672 ],
+    pop: 1764,
+    state: 'MA'
+  },
+  {
+    _id: '01027',
+    city: 'MOUNT TOM',
+    loc: [ -72.679921, 42.264319 ],
+    pop: 16864,
+    state: 'MA'
+  },
+  {
+    _id: '01002',
+    city: 'CUSHMAN',
+    loc: [ -72.51565, 42.377017 ],
+    pop: 36963,
+    state: 'MA'
+  },
+  {
+    _id: '01028',
+    city: 'EAST LONGMEADOW',
+    loc: [ -72.505565, 42.067203 ],
+    pop: 13367,
+    state: 'MA'
+  },
+  {
+    _id: '01007',
+    city: 'BELCHERTOWN',
+    loc: [ -72.410953, 42.275103 ],
+    pop: 10579,
+    state: 'MA'
+  },
+  {
+    _id: '01030',
+    city: 'FEEDING HILLS',
+    loc: [ -72.675077, 42.07182 ],
+    pop: 11985,
+    state: 'MA'
+  },
+  {
+    _id: '01031',
+    city: 'GILBERTVILLE',
+    loc: [ -72.198585, 42.332194 ],
+    pop: 2385,
+    state: 'MA'
+  },
+  {
+    _id: '01032',
+    city: 'GOSHEN',
+    loc: [ -72.844092, 42.466234 ],
+    pop: 122,
+    state: 'MA'
+  },
+  {
+    _id: '01026',
+    city: 'CUMMINGTON',
+    loc: [ -72.905767, 42.435296 ],
+    pop: 1484,
+    state: 'MA'
+  },
+  {
+    _id: '01033',
+    city: 'GRANBY',
+    loc: [ -72.520001, 42.255704 ],
+    pop: 5526,
+    state: 'MA'
+  },
+  {
+    _id: '01034',
+    city: 'TOLLAND',
+    loc: [ -72.908793, 42.070234 ],
+    pop: 1652,
+    state: 'MA'
+  },
+  {
+    _id: '01035',
+    city: 'HADLEY',
+    loc: [ -72.571499, 42.36062 ],
+    pop: 4231,
+    state: 'MA'
+  },
+  {
+    _id: '01013',
+    city: 'CHICOPEE',
+    loc: [ -72.607962, 42.162046 ],
+    pop: 23396,
+    state: 'MA'
+  },
+  {
+    _id: '01036',
+    city: 'HAMPDEN',
+    loc: [ -72.431823, 42.064756 ],
+    pop: 4709,
+    state: 'MA'
+  },
+  {
+    _id: '01038',
+    city: 'HATFIELD',
+    loc: [ -72.616735, 42.38439 ],
+    pop: 3184,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> db.zips.aggregate([])
+[
+  {
+    _id: '01008',
+    city: 'BLANDFORD',
+    loc: [ -72.936114, 42.182949 ],
+    pop: 1240,
+    state: 'MA'
+  },
+  {
+    _id: '01012',
+    city: 'CHESTERFIELD',
+    loc: [ -72.833309, 42.38167 ],
+    pop: 177,
+    state: 'MA'
+  },
+  {
+    _id: '01020',
+    city: 'CHICOPEE',
+    loc: [ -72.576142, 42.176443 ],
+    pop: 31495,
+    state: 'MA'
+  },
+  {
+    _id: '01011',
+    city: 'CHESTER',
+    loc: [ -72.988761, 42.279421 ],
+    pop: 1688,
+    state: 'MA'
+  },
+  {
+    _id: '01001',
+    city: 'AGAWAM',
+    loc: [ -72.622739, 42.070206 ],
+    pop: 15338,
+    state: 'MA'
+  },
+  {
+    _id: '01022',
+    city: 'WESTOVER AFB',
+    loc: [ -72.558657, 42.196672 ],
+    pop: 1764,
+    state: 'MA'
+  },
+  {
+    _id: '01027',
+    city: 'MOUNT TOM',
+    loc: [ -72.679921, 42.264319 ],
+    pop: 16864,
+    state: 'MA'
+  },
+  {
+    _id: '01002',
+    city: 'CUSHMAN',
+    loc: [ -72.51565, 42.377017 ],
+    pop: 36963,
+    state: 'MA'
+  },
+  {
+    _id: '01028',
+    city: 'EAST LONGMEADOW',
+    loc: [ -72.505565, 42.067203 ],
+    pop: 13367,
+    state: 'MA'
+  },
+  {
+    _id: '01007',
+    city: 'BELCHERTOWN',
+    loc: [ -72.410953, 42.275103 ],
+    pop: 10579,
+    state: 'MA'
+  },
+  {
+    _id: '01030',
+    city: 'FEEDING HILLS',
+    loc: [ -72.675077, 42.07182 ],
+    pop: 11985,
+    state: 'MA'
+  },
+  {
+    _id: '01031',
+    city: 'GILBERTVILLE',
+    loc: [ -72.198585, 42.332194 ],
+    pop: 2385,
+    state: 'MA'
+  },
+  {
+    _id: '01032',
+    city: 'GOSHEN',
+    loc: [ -72.844092, 42.466234 ],
+    pop: 122,
+    state: 'MA'
+  },
+  {
+    _id: '01026',
+    city: 'CUMMINGTON',
+    loc: [ -72.905767, 42.435296 ],
+    pop: 1484,
+    state: 'MA'
+  },
+  {
+    _id: '01033',
+    city: 'GRANBY',
+    loc: [ -72.520001, 42.255704 ],
+    pop: 5526,
+    state: 'MA'
+  },
+  {
+    _id: '01034',
+    city: 'TOLLAND',
+    loc: [ -72.908793, 42.070234 ],
+    pop: 1652,
+    state: 'MA'
+  },
+  {
+    _id: '01035',
+    city: 'HADLEY',
+    loc: [ -72.571499, 42.36062 ],
+    pop: 4231,
+    state: 'MA'
+  },
+  {
+    _id: '01013',
+    city: 'CHICOPEE',
+    loc: [ -72.607962, 42.162046 ],
+    pop: 23396,
+    state: 'MA'
+  },
+  {
+    _id: '01036',
+    city: 'HAMPDEN',
+    loc: [ -72.431823, 42.064756 ],
+    pop: 4709,
+    state: 'MA'
+  },
+  {
+    _id: '01038',
+    city: 'HATFIELD',
+    loc: [ -72.616735, 42.38439 ],
+    pop: 3184,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> db.zips.aggregate([])
+[
+  {
+    _id: '01008',
+    city: 'BLANDFORD',
+    loc: [ -72.936114, 42.182949 ],
+    pop: 1240,
+    state: 'MA'
+  },
+  {
+    _id: '01012',
+    city: 'CHESTERFIELD',
+    loc: [ -72.833309, 42.38167 ],
+    pop: 177,
+    state: 'MA'
+  },
+  {
+    _id: '01020',
+    city: 'CHICOPEE',
+    loc: [ -72.576142, 42.176443 ],
+    pop: 31495,
+    state: 'MA'
+  },
+  {
+    _id: '01011',
+    city: 'CHESTER',
+    loc: [ -72.988761, 42.279421 ],
+    pop: 1688,
+    state: 'MA'
+  },
+  {
+    _id: '01001',
+    city: 'AGAWAM',
+    loc: [ -72.622739, 42.070206 ],
+    pop: 15338,
+    state: 'MA'
+  },
+  {
+    _id: '01022',
+    city: 'WESTOVER AFB',
+    loc: [ -72.558657, 42.196672 ],
+    pop: 1764,
+    state: 'MA'
+  },
+  {
+    _id: '01027',
+    city: 'MOUNT TOM',
+    loc: [ -72.679921, 42.264319 ],
+    pop: 16864,
+    state: 'MA'
+  },
+  {
+    _id: '01002',
+    city: 'CUSHMAN',
+    loc: [ -72.51565, 42.377017 ],
+    pop: 36963,
+    state: 'MA'
+  },
+  {
+    _id: '01028',
+    city: 'EAST LONGMEADOW',
+    loc: [ -72.505565, 42.067203 ],
+    pop: 13367,
+    state: 'MA'
+  },
+  {
+    _id: '01007',
+    city: 'BELCHERTOWN',
+    loc: [ -72.410953, 42.275103 ],
+    pop: 10579,
+    state: 'MA'
+  },
+  {
+    _id: '01030',
+    city: 'FEEDING HILLS',
+    loc: [ -72.675077, 42.07182 ],
+    pop: 11985,
+    state: 'MA'
+  },
+  {
+    _id: '01031',
+    city: 'GILBERTVILLE',
+    loc: [ -72.198585, 42.332194 ],
+    pop: 2385,
+    state: 'MA'
+  },
+  {
+    _id: '01032',
+    city: 'GOSHEN',
+    loc: [ -72.844092, 42.466234 ],
+    pop: 122,
+    state: 'MA'
+  },
+  {
+    _id: '01026',
+    city: 'CUMMINGTON',
+    loc: [ -72.905767, 42.435296 ],
+    pop: 1484,
+    state: 'MA'
+  },
+  {
+    _id: '01033',
+    city: 'GRANBY',
+    loc: [ -72.520001, 42.255704 ],
+    pop: 5526,
+    state: 'MA'
+  },
+  {
+    _id: '01034',
+    city: 'TOLLAND',
+    loc: [ -72.908793, 42.070234 ],
+    pop: 1652,
+    state: 'MA'
+  },
+  {
+    _id: '01035',
+    city: 'HADLEY',
+    loc: [ -72.571499, 42.36062 ],
+    pop: 4231,
+    state: 'MA'
+  },
+  {
+    _id: '01013',
+    city: 'CHICOPEE',
+    loc: [ -72.607962, 42.162046 ],
+    pop: 23396,
+    state: 'MA'
+  },
+  {
+    _id: '01036',
+    city: 'HAMPDEN',
+    loc: [ -72.431823, 42.064756 ],
+    pop: 4709,
+    state: 'MA'
+  },
+  {
+    _id: '01038',
+    city: 'HATFIELD',
+    loc: [ -72.616735, 42.38439 ],
+    pop: 3184,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> db.zips.aggregate([])
+[
+  {
+    _id: '01008',
+    city: 'BLANDFORD',
+    loc: [ -72.936114, 42.182949 ],
+    pop: 1240,
+    state: 'MA'
+  },
+  {
+    _id: '01012',
+    city: 'CHESTERFIELD',
+    loc: [ -72.833309, 42.38167 ],
+    pop: 177,
+    state: 'MA'
+  },
+  {
+    _id: '01020',
+    city: 'CHICOPEE',
+    loc: [ -72.576142, 42.176443 ],
+    pop: 31495,
+    state: 'MA'
+  },
+  {
+    _id: '01011',
+    city: 'CHESTER',
+    loc: [ -72.988761, 42.279421 ],
+    pop: 1688,
+    state: 'MA'
+  },
+  {
+    _id: '01001',
+    city: 'AGAWAM',
+    loc: [ -72.622739, 42.070206 ],
+    pop: 15338,
+    state: 'MA'
+  },
+  {
+    _id: '01022',
+    city: 'WESTOVER AFB',
+    loc: [ -72.558657, 42.196672 ],
+    pop: 1764,
+    state: 'MA'
+  },
+  {
+    _id: '01027',
+    city: 'MOUNT TOM',
+    loc: [ -72.679921, 42.264319 ],
+    pop: 16864,
+    state: 'MA'
+  },
+  {
+    _id: '01002',
+    city: 'CUSHMAN',
+    loc: [ -72.51565, 42.377017 ],
+    pop: 36963,
+    state: 'MA'
+  },
+  {
+    _id: '01028',
+    city: 'EAST LONGMEADOW',
+    loc: [ -72.505565, 42.067203 ],
+    pop: 13367,
+    state: 'MA'
+  },
+  {
+    _id: '01007',
+    city: 'BELCHERTOWN',
+    loc: [ -72.410953, 42.275103 ],
+    pop: 10579,
+    state: 'MA'
+  },
+  {
+    _id: '01030',
+    city: 'FEEDING HILLS',
+    loc: [ -72.675077, 42.07182 ],
+    pop: 11985,
+    state: 'MA'
+  },
+  {
+    _id: '01031',
+    city: 'GILBERTVILLE',
+    loc: [ -72.198585, 42.332194 ],
+    pop: 2385,
+    state: 'MA'
+  },
+  {
+    _id: '01032',
+    city: 'GOSHEN',
+    loc: [ -72.844092, 42.466234 ],
+    pop: 122,
+    state: 'MA'
+  },
+  {
+    _id: '01026',
+    city: 'CUMMINGTON',
+    loc: [ -72.905767, 42.435296 ],
+    pop: 1484,
+    state: 'MA'
+  },
+  {
+    _id: '01033',
+    city: 'GRANBY',
+    loc: [ -72.520001, 42.255704 ],
+    pop: 5526,
+    state: 'MA'
+  },
+  {
+    _id: '01034',
+    city: 'TOLLAND',
+    loc: [ -72.908793, 42.070234 ],
+    pop: 1652,
+    state: 'MA'
+  },
+  {
+    _id: '01035',
+    city: 'HADLEY',
+    loc: [ -72.571499, 42.36062 ],
+    pop: 4231,
+    state: 'MA'
+  },
+  {
+    _id: '01013',
+    city: 'CHICOPEE',
+    loc: [ -72.607962, 42.162046 ],
+    pop: 23396,
+    state: 'MA'
+  },
+  {
+    _id: '01036',
+    city: 'HAMPDEN',
+    loc: [ -72.431823, 42.064756 ],
+    pop: 4709,
+    state: 'MA'
+  },
+  {
+    _id: '01038',
+    city: 'HATFIELD',
+    loc: [ -72.616735, 42.38439 ],
+    pop: 3184,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> db.zips.aggregate([..])
+Uncaught:
+SyntaxError: Unexpected token (1:19)
+
+> 1 | db.zips.aggregate([..])
+    |                    ^
+  2 |
+
+Blog> db.zips.aggregate([])
+[
+  {
+    _id: '01008',
+    city: 'BLANDFORD',
+    loc: [ -72.936114, 42.182949 ],
+    pop: 1240,
+    state: 'MA'
+  },
+  {
+    _id: '01012',
+    city: 'CHESTERFIELD',
+    loc: [ -72.833309, 42.38167 ],
+    pop: 177,
+    state: 'MA'
+  },
+  {
+    _id: '01020',
+    city: 'CHICOPEE',
+    loc: [ -72.576142, 42.176443 ],
+    pop: 31495,
+    state: 'MA'
+  },
+  {
+    _id: '01011',
+    city: 'CHESTER',
+    loc: [ -72.988761, 42.279421 ],
+    pop: 1688,
+    state: 'MA'
+  },
+  {
+    _id: '01001',
+    city: 'AGAWAM',
+    loc: [ -72.622739, 42.070206 ],
+    pop: 15338,
+    state: 'MA'
+  },
+  {
+    _id: '01022',
+    city: 'WESTOVER AFB',
+    loc: [ -72.558657, 42.196672 ],
+    pop: 1764,
+    state: 'MA'
+  },
+  {
+    _id: '01027',
+    city: 'MOUNT TOM',
+    loc: [ -72.679921, 42.264319 ],
+    pop: 16864,
+    state: 'MA'
+  },
+  {
+    _id: '01002',
+    city: 'CUSHMAN',
+    loc: [ -72.51565, 42.377017 ],
+    pop: 36963,
+    state: 'MA'
+  },
+  {
+    _id: '01028',
+    city: 'EAST LONGMEADOW',
+    loc: [ -72.505565, 42.067203 ],
+    pop: 13367,
+    state: 'MA'
+  },
+  {
+    _id: '01007',
+    city: 'BELCHERTOWN',
+    loc: [ -72.410953, 42.275103 ],
+    pop: 10579,
+    state: 'MA'
+  },
+  {
+    _id: '01030',
+    city: 'FEEDING HILLS',
+    loc: [ -72.675077, 42.07182 ],
+    pop: 11985,
+    state: 'MA'
+  },
+  {
+    _id: '01031',
+    city: 'GILBERTVILLE',
+    loc: [ -72.198585, 42.332194 ],
+    pop: 2385,
+    state: 'MA'
+  },
+  {
+    _id: '01032',
+    city: 'GOSHEN',
+    loc: [ -72.844092, 42.466234 ],
+    pop: 122,
+    state: 'MA'
+  },
+  {
+    _id: '01026',
+    city: 'CUMMINGTON',
+    loc: [ -72.905767, 42.435296 ],
+    pop: 1484,
+    state: 'MA'
+  },
+  {
+    _id: '01033',
+    city: 'GRANBY',
+    loc: [ -72.520001, 42.255704 ],
+    pop: 5526,
+    state: 'MA'
+  },
+  {
+    _id: '01034',
+    city: 'TOLLAND',
+    loc: [ -72.908793, 42.070234 ],
+    pop: 1652,
+    state: 'MA'
+  },
+  {
+    _id: '01035',
+    city: 'HADLEY',
+    loc: [ -72.571499, 42.36062 ],
+    pop: 4231,
+    state: 'MA'
+  },
+  {
+    _id: '01013',
+    city: 'CHICOPEE',
+    loc: [ -72.607962, 42.162046 ],
+    pop: 23396,
+    state: 'MA'
+  },
+  {
+    _id: '01036',
+    city: 'HAMPDEN',
+    loc: [ -72.431823, 42.064756 ],
+    pop: 4709,
+    state: 'MA'
+  },
+  {
+    _id: '01038',
+    city: 'HATFIELD',
+    loc: [ -72.616735, 42.38439 ],
+    pop: 3184,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> db.zips.aggregate([])
+[
+  {
+    _id: '01008',
+    city: 'BLANDFORD',
+    loc: [ -72.936114, 42.182949 ],
+    pop: 1240,
+    state: 'MA'
+  },
+  {
+    _id: '01012',
+    city: 'CHESTERFIELD',
+    loc: [ -72.833309, 42.38167 ],
+    pop: 177,
+    state: 'MA'
+  },
+  {
+    _id: '01020',
+    city: 'CHICOPEE',
+    loc: [ -72.576142, 42.176443 ],
+    pop: 31495,
+    state: 'MA'
+  },
+  {
+    _id: '01011',
+    city: 'CHESTER',
+    loc: [ -72.988761, 42.279421 ],
+    pop: 1688,
+    state: 'MA'
+  },
+  {
+    _id: '01001',
+    city: 'AGAWAM',
+    loc: [ -72.622739, 42.070206 ],
+    pop: 15338,
+    state: 'MA'
+  },
+  {
+    _id: '01022',
+    city: 'WESTOVER AFB',
+    loc: [ -72.558657, 42.196672 ],
+    pop: 1764,
+    state: 'MA'
+  },
+  {
+    _id: '01027',
+    city: 'MOUNT TOM',
+    loc: [ -72.679921, 42.264319 ],
+    pop: 16864,
+    state: 'MA'
+  },
+  {
+    _id: '01002',
+    city: 'CUSHMAN',
+    loc: [ -72.51565, 42.377017 ],
+    pop: 36963,
+    state: 'MA'
+  },
+  {
+    _id: '01028',
+    city: 'EAST LONGMEADOW',
+    loc: [ -72.505565, 42.067203 ],
+    pop: 13367,
+    state: 'MA'
+  },
+  {
+    _id: '01007',
+    city: 'BELCHERTOWN',
+    loc: [ -72.410953, 42.275103 ],
+    pop: 10579,
+    state: 'MA'
+  },
+  {
+    _id: '01030',
+    city: 'FEEDING HILLS',
+    loc: [ -72.675077, 42.07182 ],
+    pop: 11985,
+    state: 'MA'
+  },
+  {
+    _id: '01031',
+    city: 'GILBERTVILLE',
+    loc: [ -72.198585, 42.332194 ],
+    pop: 2385,
+    state: 'MA'
+  },
+  {
+    _id: '01032',
+    city: 'GOSHEN',
+    loc: [ -72.844092, 42.466234 ],
+    pop: 122,
+    state: 'MA'
+  },
+  {
+    _id: '01026',
+    city: 'CUMMINGTON',
+    loc: [ -72.905767, 42.435296 ],
+    pop: 1484,
+    state: 'MA'
+  },
+  {
+    _id: '01033',
+    city: 'GRANBY',
+    loc: [ -72.520001, 42.255704 ],
+    pop: 5526,
+    state: 'MA'
+  },
+  {
+    _id: '01034',
+    city: 'TOLLAND',
+    loc: [ -72.908793, 42.070234 ],
+    pop: 1652,
+    state: 'MA'
+  },
+  {
+    _id: '01035',
+    city: 'HADLEY',
+    loc: [ -72.571499, 42.36062 ],
+    pop: 4231,
+    state: 'MA'
+  },
+  {
+    _id: '01013',
+    city: 'CHICOPEE',
+    loc: [ -72.607962, 42.162046 ],
+    pop: 23396,
+    state: 'MA'
+  },
+  {
+    _id: '01036',
+    city: 'HAMPDEN',
+    loc: [ -72.431823, 42.064756 ],
+    pop: 4709,
+    state: 'MA'
+  },
+  {
+    _id: '01038',
+    city: 'HATFIELD',
+    loc: [ -72.616735, 42.38439 ],
+    pop: 3184,
+    state: 'MA'
+  }
+]
+Type "it" for more
+Blog> db.zips.aggregate([
+... {$group:{_id:{state:"$state",city:"$city"}}}
+... }])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (3:0)
+
+  1 | db.zips.aggregate([
+  2 | {$group:{_id:{state:"$state",city:"$city"}}}
+> 3 | }])
+    | ^
+  4 |
+
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"}}} }])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:65)
+
+> 1 | db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"}}} }])
+    |                                                                  ^
+  2 |
+
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"}}} }}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:65)
+
+> 1 | db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"}}} }}])
+    |                                                                  ^
+  2 |
+
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"}}} }}}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:65)
+
+> 1 | db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"}}} }}}])
+    |                                                                  ^
+  2 |
+
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"}}}])
+[
+  { _id: { state: 'AL', city: 'BRIERFIELD' } },
+  { _id: { state: 'AL', city: 'ORANGE BEACH' } },
+  { _id: { state: 'MN', city: 'SAINT PAUL' } },
+  { _id: { state: 'ME', city: 'MILLINOCKET' } },
+  { _id: { state: 'OH', city: 'CENTERBURG' } },
+  { _id: { state: 'FL', city: 'WEST PALM BEACH' } },
+  { _id: { state: 'WI', city: 'SEYMOUR' } },
+  { _id: { state: 'MN', city: 'THIEF RIVER FALL' } },
+  { _id: { state: 'IL', city: 'OAK HILL' } },
+  { _id: { state: 'MO', city: 'ANNAPOLIS' } },
+  { _id: { state: 'MO', city: 'HOLLISTER' } },
+  { _id: { state: 'AR', city: 'CLARKRIDGE' } },
+  { _id: { state: 'TX', city: 'WALLER' } },
+  { _id: { state: 'CA', city: 'FLINTRIDGE' } },
+  { _id: { state: 'OK', city: 'ELGIN' } },
+  { _id: { state: 'FL', city: 'HIGH SPRINGS' } },
+  { _id: { state: 'WA', city: 'NORMANDY PARK' } },
+  { _id: { state: 'AK', city: 'NEW STUYAHOK' } },
+  { _id: { state: 'MO', city: 'RICHMOND HEIGHTS' } },
+  { _id: { state: 'NY', city: 'WEST CHAZY' } }
+]
+Type "it" for more
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}])
+[
+  { _id: { state: 'MI', city: 'WOODHAVEN' }, pop: 38874 },
+  { _id: { state: 'ME', city: 'NEW GLOUCESTER' }, pop: 3916 },
+  { _id: { state: 'PA', city: 'CALIFORNIA' }, pop: 5778 },
+  { _id: { state: 'SC', city: 'JEFFERSON' }, pop: 3257 },
+  { _id: { state: 'IA', city: 'SCRANTON' }, pop: 814 },
+  { _id: { state: 'WV', city: 'TROY' }, pop: 115 },
+  { _id: { state: 'SD', city: 'WASTA' }, pop: 217 },
+  { _id: { state: 'ND', city: 'ARTHUR' }, pop: 543 },
+  { _id: { state: 'MT', city: 'EAST HELENA' }, pop: 3901 },
+  { _id: { state: 'NY', city: 'SCHAGHTICOKE' }, pop: 3035 },
+  { _id: { state: 'NY', city: 'MOUNT MARION' }, pop: 753 },
+  { _id: { state: 'IA', city: 'POMEROY' }, pop: 1197 },
+  { _id: { state: 'MO', city: 'REEDS' }, pop: 222 },
+  { _id: { state: 'ID', city: 'ROBERTS' }, pop: 1436 },
+  { _id: { state: 'AK', city: 'BORDER' }, pop: 1805 },
+  { _id: { state: 'IN', city: 'SHELBYVILLE' }, pop: 24691 },
+  { _id: { state: 'FL', city: 'STUART' }, pop: 47308 },
+  { _id: { state: 'KS', city: 'VLIETS' }, pop: 469 },
+  { _id: { state: 'IL', city: 'IVESDALE' }, pop: 596 },
+  { _id: { state: 'CA', city: 'EUREKA' }, pop: 45720 }
+]
+Type "it" for more
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}
+... {$sort:{pop:1}}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (2:0)
+
+  1 | db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}
+> 2 | {$sort:{pop:1}}])
+    | ^
+  3 |
+
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}, {$sort:{pop:1}}])
+[
+  { _id: { state: 'FL', city: 'CECIL FIELD NAS' }, pop: 0 },
+  { _id: { state: 'ME', city: 'BUSTINS ISLAND' }, pop: 0 },
+  { _id: { state: 'KY', city: 'BROWDER' }, pop: 0 },
+  { _id: { state: 'TX', city: 'FULTON' }, pop: 0 },
+  { _id: { state: 'AK', city: 'SELAWIK' }, pop: 0 },
+  { _id: { state: 'AK', city: 'EMMONAK' }, pop: 0 },
+  { _id: { state: 'SC', city: 'QUINBY' }, pop: 0 },
+  { _id: { state: 'OR', city: 'KENT' }, pop: 0 },
+  { _id: { state: 'NM', city: 'OIL CENTER' }, pop: 0 },
+  { _id: { state: 'LA', city: 'FORDOCHE' }, pop: 0 },
+  { _id: { state: 'NY', city: 'RAQUETTE LAKE' }, pop: 0 },
+  { _id: { state: 'VA', city: 'WALLOPS ISLAND' }, pop: 0 },
+  { _id: { state: 'TX', city: 'ECLETO' }, pop: 0 },
+  { _id: { state: 'NM', city: 'REGINA' }, pop: 0 },
+  { _id: { state: 'WV', city: 'MOUNT CARBON' }, pop: 0 },
+  { _id: { state: 'NC', city: 'GLOUCESTER' }, pop: 0 },
+  { _id: { state: 'AK', city: 'GRAYLING' }, pop: 0 },
+  { _id: { state: 'ID', city: 'KEUTERVILLE' }, pop: 0 },
+  { _id: { state: 'GA', city: 'FORT STEWART' }, pop: 0 },
+  { _id: { state: 'AL', city: 'ALLEN' }, pop: 0 }
+]
+Type "it" for more
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}, {$sort:{pop:1}},{$gro}])
+db.zips.aggregate([ {$group
+
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}, {$sort:{pop:1}},{$grooup:{_id:"$_id.state",maxcity:{$last:"$id.city"},maxcitypop:{$last:"$pop"}}}])
+MongoServerError: Unrecognized pipeline stage name: '$grooup'
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}, {$sort:{pop:1}},{$group:{_id:"$_id.state",maxcity:{$last:"$id.city"},maxcitypop:{$last:"$pop"}}}])
+[
+  { _id: 'AL', maxcity: null, maxcitypop: 242606 },
+  { _id: 'HI', maxcity: null, maxcitypop: 396643 },
+  { _id: 'MD', maxcity: null, maxcitypop: 733081 },
+  { _id: 'CO', maxcity: null, maxcitypop: 451182 },
+  { _id: 'WA', maxcity: null, maxcitypop: 520096 },
+  { _id: 'GA', maxcity: null, maxcitypop: 609591 },
+  { _id: 'DC', maxcity: null, maxcitypop: 606879 },
+  { _id: 'IL', maxcity: null, maxcitypop: 2452177 },
+  { _id: 'KY', maxcity: null, maxcitypop: 288058 },
+  { _id: 'MO', maxcity: null, maxcitypop: 397802 },
+  { _id: 'RI', maxcity: null, maxcitypop: 176404 },
+  { _id: 'ID', maxcity: null, maxcitypop: 165522 },
+  { _id: 'CA', maxcity: null, maxcitypop: 2102295 },
+  { _id: 'SC', maxcity: null, maxcitypop: 269521 },
+  { _id: 'ME', maxcity: null, maxcitypop: 63268 },
+  { _id: 'NE', maxcity: null, maxcitypop: 358930 },
+  { _id: 'WY', maxcity: null, maxcitypop: 70185 },
+  { _id: 'MN', maxcity: null, maxcitypop: 344719 },
+  { _id: 'NJ', maxcity: null, maxcitypop: 275572 },
+  { _id: 'OH', maxcity: null, maxcitypop: 536759 }
+]
+Type "it" for more
+Blog> db.zips.aggregate([ {$group:{_id:{state:"$state",city:"$city"},pop:{$sum:"$pop"}}}, {$sort:{pop:1}},{$group:{_id:"$_id.state",maxcity:{$last:"$_id.city"},maxcitypop:{$last:"$pop"}}}])
+[
+  { _id: 'HI', maxcity: 'HONOLULU', maxcitypop: 396643 },
+  { _id: 'AL', maxcity: 'BIRMINGHAM', maxcitypop: 242606 },
+  { _id: 'CO', maxcity: 'DENVER', maxcitypop: 451182 },
+  { _id: 'TN', maxcity: 'MEMPHIS', maxcitypop: 632837 },
+  { _id: 'WA', maxcity: 'SEATTLE', maxcitypop: 520096 },
+  { _id: 'MD', maxcity: 'BALTIMORE', maxcitypop: 733081 },
+  { _id: 'GA', maxcity: 'ATLANTA', maxcitypop: 609591 },
+  { _id: 'DC', maxcity: 'WASHINGTON', maxcitypop: 606879 },
+  { _id: 'IL', maxcity: 'CHICAGO', maxcitypop: 2452177 },
+  { _id: 'KY', maxcity: 'LOUISVILLE', maxcitypop: 288058 },
+  { _id: 'MO', maxcity: 'SAINT LOUIS', maxcitypop: 397802 },
+  { _id: 'RI', maxcity: 'CRANSTON', maxcitypop: 176404 },
+  { _id: 'ID', maxcity: 'BOISE', maxcitypop: 165522 },
+  { _id: 'CA', maxcity: 'LOS ANGELES', maxcitypop: 2102295 },
+  { _id: 'SC', maxcity: 'COLUMBIA', maxcitypop: 269521 },
+  { _id: 'ME', maxcity: 'PORTLAND', maxcitypop: 63268 },
+  { _id: 'NE', maxcity: 'OMAHA', maxcitypop: 358930 },
+  { _id: 'WY', maxcity: 'CHEYENNE', maxcitypop: 70185 },
+  { _id: 'MN', maxcity: 'MINNEAPOLIS', maxcitypop: 344719 },
+  { _id: 'NJ', maxcity: 'NEWARK', maxcitypop: 275572 }
+]
+Type "it" for more
+Blog> it
+[
+  { _id: 'OH', maxcity: 'CLEVELAND', maxcitypop: 536759 },
+  { _id: 'WV', maxcity: 'HUNTINGTON', maxcitypop: 75343 },
+  { _id: 'TX', maxcity: 'HOUSTON', maxcitypop: 2095918 },
+  { _id: 'NY', maxcity: 'BROOKLYN', maxcitypop: 2300504 },
+  { _id: 'MA', maxcity: 'WORCESTER', maxcitypop: 169856 },
+  { _id: 'CT', maxcity: 'BRIDGEPORT', maxcitypop: 141638 },
+  { _id: 'NC', maxcity: 'CHARLOTTE', maxcitypop: 465833 },
+  { _id: 'OK', maxcity: 'TULSA', maxcitypop: 389072 },
+  { _id: 'OR', maxcity: 'PORTLAND', maxcitypop: 518543 },
+  { _id: 'VA', maxcity: 'VIRGINIA BEACH', maxcitypop: 385080 },
+  { _id: 'VT', maxcity: 'BURLINGTON', maxcitypop: 39127 },
+  { _id: 'SD', maxcity: 'SIOUX FALLS', maxcitypop: 102046 },
+  { _id: 'PA', maxcity: 'PHILADELPHIA', maxcitypop: 1610956 },
+  { _id: 'NM', maxcity: 'ALBUQUERQUE', maxcitypop: 449584 },
+  { _id: 'FL', maxcity: 'MIAMI', maxcitypop: 825232 },
+  { _id: 'AR', maxcity: 'LITTLE ROCK', maxcitypop: 192895 },
+  { _id: 'LA', maxcity: 'NEW ORLEANS', maxcitypop: 496937 },
+  { _id: 'NV', maxcity: 'LAS VEGAS', maxcitypop: 597557 },
+  { _id: 'AZ', maxcity: 'PHOENIX', maxcitypop: 890853 },
+  { _id: 'AK', maxcity: 'ANCHORAGE', maxcitypop: 183987 }
+]
+Type "it" for more
+Blog> it
+[
+  { _id: 'MI', maxcity: 'DETROIT', maxcitypop: 963243 },
+  { _id: 'KS', maxcity: 'WICHITA', maxcitypop: 295115 },
+  { _id: 'ND', maxcity: 'GRAND FORKS', maxcitypop: 59527 },
+  { _id: 'IA', maxcity: 'DES MOINES', maxcitypop: 148155 },
+  { _id: 'NH', maxcity: 'MANCHESTER', maxcitypop: 106452 },
+  { _id: 'DE', maxcity: 'NEWARK', maxcitypop: 111674 },
+  { _id: 'MT', maxcity: 'BILLINGS', maxcitypop: 78805 },
+  { _id: 'UT', maxcity: 'SALT LAKE CITY', maxcitypop: 186346 },
+  { _id: 'MS', maxcity: 'JACKSON', maxcitypop: 204788 },
+  { _id: 'WI', maxcity: 'MILWAUKEE', maxcitypop: 597324 },
+  { _id: 'IN', maxcity: 'INDIANAPOLIS', maxcitypop: 348868 }
+]
+Blog> db.orders.aggregate([{$sort:{price:1},{$group:{_id:{"$name"},lowestPrice:{$last:"$price"}}}}])
+Uncaught:
+SyntaxError: Unexpected token (1:38)
+
+> 1 | db.orders.aggregate([{$sort:{price:1},{$group:{_id:{"$name"},lowestPrice:{$last:"$price"}}}}])
+    |                                       ^
+  2 |
+
+Blog> db.orders.aggregate([{$sort:{price:1}{$group:{_id:{"$name"},lowestPrice:{$last:"$price"}}}}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:37)
+
+> 1 | db.orders.aggregate([{$sort:{price:1}{$group:{_id:{"$name"},lowestPrice:{$last:"$price"}}}}])
+    |                                      ^
+  2 |
+
+Blog> db.orders.aggregate([{$sort:{price:1}},{$group:{_id:{"$name"},lowestPrice:{$last:"$price"}}}])
+Uncaught:
+SyntaxError: Unexpected token (1:60)
+
+> 1 | db.orders.aggregate([{$sort:{price:1}},{$group:{_id:{"$name"},lowestPrice:{$last:"$price"}}}])
+    |                                                             ^
+  2 |
+
+Blog> db.orders.aggregate([{$sort:{price:1}},{$group:{_id:{"$name"}},lowestPrice:{$last:"$price"}}])
+Uncaught:
+SyntaxError: Unexpected token (1:60)
+
+> 1 | db.orders.aggregate([{$sort:{price:1}},{$group:{_id:{"$name"}},lowestPrice:{$last:"$price"}}])
+    |                                                             ^
+  2 |
+
+Blog> db.orders.aggregate([{$sort:{price:1}},{$group:{_id:"$name"},lowestPrice:{$last:"$price"}}])
+MongoServerError: A pipeline stage specification object must contain exactly one field.
+Blog> db.orders.aggregate([{$sort:{price:1}},{$group:{_id:"$name",lowestPrice:{$last:"$price"}}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:89)
+
+> 1 | db.orders.aggregate([{$sort:{price:1}},{$group:{_id:"$name",lowestPrice:{$last:"$price"}}])
+    |                                                                                          ^
+  2 |
+
+Blog> db.orders.aggregate([{$sort:{price:1}},{$group:{_id:"$name",lowestPrice:{$last:"$price"}])
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:88)
+
+> 1 | db.orders.aggregate([{$sort:{price:1}},{$group:{_id:"$name",lowestPrice:{$last:"$price"}])
+    |                                                                                         ^
+  2 |
+
+Blog> db.orders.aggregate([{$sort:{price:1}},{$group:{_id:"$name",lowestPrice:{$fase:"$price"}}}])
+MongoServerError: unknown group operator '$fase'
+Blog> db.orders.aggregate([{$sort:{price:1}},{$group:{_id:"$name",lowestPrice:{$faste:"$price"}}}])
+MongoServerError: unknown group operator '$faste'
+Blog> db.orders.aggregate([{$sort:{price:1}},{$group:{_id:"$name",lowestPrice:{$first:"$price"}}}])
+[
+  { _id: 'Vegan', lowestPrice: 17 },
+  { _id: 'Pepperoni', lowestPrice: 19 },
+  { _id: 'Cheese', lowestPrice: 12 }
+]
+Blog> show collections
+blogs
+orders
+unece
+zips
+Blog> db.unece.find().pretty()
+[
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea46"),
+    Country: 'Albania',
+    Year: '2000',
+    'Area (square kilometres)': 28748,
+    'Total population': 3401198,
+    'Population density, pers': { ' per sq': { ' km': 118.31077 } },
+    'Population aged 0-14, male': 564851,
+    'Population aged 0-14, female': 529820,
+    'Population aged 15-64, male': 1029446,
+    'Population aged 15-64, female': 1086946,
+    'Population aged 64+, male': 82588,
+    'Population aged 64+, female': 107547,
+    'Total population, male (%)': 49.30278,
+    'Total population, female (%)': 50.69722,
+    'Life expectancy at birth, women': 78.11,
+    'Life expectancy at birth, men': 72.07,
+    'Life expectancy at age 65, women': 17.16,
+    'Life expectancy at age 65, men': 13.52,
+    'Total fertility rate': 2.4,
+    'Adolescent fertility rate': 15.24086,
+    'Mean age of women at birth of first child': null,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 41.23149,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 61.3549,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': null,
+    'Female members of parliament, percent of total': 5.16129,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': 0.29953,
+    'Unemployment rate': 16.8,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': 11975.49451,
+    'GDP at current prices, millions of NCUs': 501199,
+    'GDP per capita at current prices and PPPs, US$': 3890.19371,
+    'GDP per capita at current prices, NCUs': 162812.58324,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 3595.59866,
+    'Purchasing power parity (PPP), NCU per US$': 41.85205,
+    'Exchange rate (XR), NCU per US$': 143.70942,
+    'Consumer price index, growth rate': 0.04958,
+    'Export of goods and services, per cent of GDP': 20.11528,
+    'Import of goods and services, per cent of GDP': 43.33879,
+    'External balance on goods and services, per cent of GDP': -23.22351,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 86.60708,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 60.547
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 80.00773,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 27.79084 },
+    'GDP: in industry etc': { ' (ISIC4 B-E), output approach, per cent share of GVA': 9.13831 },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 12.84876,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 27.66077,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 12.22813,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 9.19759,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 1.1356,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 280,
+    'Persons injured in road accidents': 336,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': 400
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea47"),
+    Country: 'Albania',
+    Year: '2001',
+    'Area (square kilometres)': 28748,
+    'Total population': 3073734,
+    'Population density, pers': { ' per sq': { ' km': 106.91992 } },
+    'Population aged 0-14, male': 460732,
+    'Population aged 0-14, female': 436652,
+    'Population aged 15-64, male': 963612,
+    'Population aged 15-64, female': 980800,
+    'Population aged 64+, male': 108254,
+    'Population aged 64+, female': 123684,
+    'Total population, male (%)': 49.86111,
+    'Total population, female (%)': 50.13889,
+    'Life expectancy at birth, women': 80.45,
+    'Life expectancy at birth, men': 74.12,
+    'Life expectancy at age 65, women': 19.51,
+    'Life expectancy at age 65, men': 15.85,
+    'Total fertility rate': 2.1,
+    'Adolescent fertility rate': 16.49547,
+    'Mean age of women at birth of first child': null,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 40.64015,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 61.96395,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': 16.66667,
+    'Female members of parliament, percent of total': 5.16129,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': -13.81973,
+    'Unemployment rate': 16.4,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': 55.69606,
+    'Economic activity rate, men 15-64': 82.64509,
+    'GDP at current prices and PPPs, millions of US$': 13326.07246,
+    'GDP at current prices, millions of NCUs': 563448.8,
+    'GDP per capita at current prices and PPPs, US$': 4354.68371,
+    'GDP per capita at current prices, NCUs': 184123.3657,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 3868.50614,
+    'Purchasing power parity (PPP), NCU per US$': 42.28169,
+    'Exchange rate (XR), NCU per US$': 143.48483,
+    'Consumer price index, growth rate': 3.10842,
+    'Export of goods and services, per cent of GDP': 21.33342,
+    'Import of goods and services, per cent of GDP': 45.15763,
+    'External balance on goods and services, per cent of GDP': -23.82421,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 88.93947,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 72.6648
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 86.16708,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 25.41113 },
+    'GDP: in industry etc': { ' (ISIC4 B-E), output approach, per cent share of GVA': 8.60389 },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 15.7104,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 26.90267,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 12.26481,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 9.81242,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 1.29468,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 297,
+    'Persons injured in road accidents': 250,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': 409
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea48"),
+    Country: 'Albania',
+    Year: '2002',
+    'Area (square kilometres)': 28748,
+    'Total population': 3093465,
+    'Population density, pers': { ' per sq': { ' km': 107.60627 } },
+    'Population aged 0-14, male': 452373,
+    'Population aged 0-14, female': 427711,
+    'Population aged 15-64, male': 977294,
+    'Population aged 15-64, female': 995773,
+    'Population aged 64+, male': 112546,
+    'Population aged 64+, female': 127768,
+    'Total population, male (%)': 49.8539,
+    'Total population, female (%)': 50.1461,
+    'Life expectancy at birth, women': 79.2,
+    'Life expectancy at birth, men': 73.75,
+    'Life expectancy at age 65, women': 18.38,
+    'Life expectancy at age 65, men': 15.15,
+    'Total fertility rate': 2.29,
+    'Adolescent fertility rate': 14.66575,
+    'Mean age of women at birth of first child': null,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 38.82784,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 62.33945,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': 10,
+    'Female members of parliament, percent of total': 5.71429,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': -0.04617,
+    'Unemployment rate': 15.8,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': 14315.31024,
+    'GDP at current prices, millions of NCUs': 610494.3,
+    'GDP per capita at current prices and PPPs, US$': 4691.9906,
+    'GDP per capita at current prices, NCUs': 200095.80434,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 4287.0615,
+    'Purchasing power parity (PPP), NCU per US$': 42.64625,
+    'Exchange rate (XR), NCU per US$': 140.15452,
+    'Consumer price index, growth rate': 5.51499,
+    'Export of goods and services, per cent of GDP': 20.9456,
+    'Import of goods and services, per cent of GDP': 47.57943,
+    'External balance on goods and services, per cent of GDP': -26.63383,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 90.76066,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 77.37945
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 89.23623,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 24.77302 },
+    'GDP: in industry etc': { ' (ISIC4 B-E), output approach, per cent share of GVA': 7.6952 },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 18.29394,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 25.48632,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 12.45278,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 10.24306,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 1.05568,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 250,
+    'Persons injured in road accidents': 228,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': 428
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea49"),
+    Country: 'Albania',
+    Year: '2003',
+    'Area (square kilometres)': 28748,
+    'Total population': 3111162,
+    'Population density, pers': { ' per sq': { ' km': 108.22186 } },
+    'Population aged 0-14, male': 442939,
+    'Population aged 0-14, female': 417968,
+    'Population aged 15-64, male': 991075,
+    'Population aged 15-64, female': 1010693,
+    'Population aged 64+, male': 116714,
+    'Population aged 64+, female': 131773,
+    'Total population, male (%)': 49.84401,
+    'Total population, female (%)': 50.15599,
+    'Life expectancy at birth, women': 78.42,
+    'Life expectancy at birth, men': 73.31,
+    'Life expectancy at age 65, women': 17.54,
+    'Life expectancy at age 65, men': 14.47,
+    'Total fertility rate': 2,
+    'Adolescent fertility rate': 16.35957,
+    'Mean age of women at birth of first child': null,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 38.9348,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 62.02931,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': null,
+    'Female members of parliament, percent of total': null,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': 0.66087,
+    'Unemployment rate': 15,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': 15381.49231,
+    'GDP at current prices, millions of NCUs': 677737.5,
+    'GDP per capita at current prices and PPPs, US$': 5060.33396,
+    'GDP per capita at current prices, NCUs': 222967.83809,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 4626.60886,
+    'Purchasing power parity (PPP), NCU per US$': 44.06188,
+    'Exchange rate (XR), NCU per US$': 121.86325,
+    'Consumer price index, growth rate': 2.63093,
+    'Export of goods and services, per cent of GDP': 20.84741,
+    'Import of goods and services, per cent of GDP': 46.17322,
+    'External balance on goods and services, per cent of GDP': -25.32581,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 93.43226,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 87.92819
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 90.09128,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 24.99078 },
+    'GDP: in industry etc': { ' (ISIC4 B-E), output approach, per cent share of GVA': 9.38804 },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 17.96485,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 23.74124,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 12.36612,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 10.49342,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 1.05555,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 264,
+    'Persons injured in road accidents': 248,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': 428
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea4a"),
+    Country: 'Albania',
+    Year: '2004',
+    'Area (square kilometres)': 28748,
+    'Total population': 3127264,
+    'Population density, pers': { ' per sq': { ' km': 108.78197 } },
+    'Population aged 0-14, male': 433178,
+    'Population aged 0-14, female': 407988,
+    'Population aged 15-64, male': 1004398,
+    'Population aged 15-64, female': 1024845,
+    'Population aged 64+, male': 120801,
+    'Population aged 64+, female': 136054,
+    'Total population, male (%)': 49.83196,
+    'Total population, female (%)': 50.16804,
+    'Life expectancy at birth, women': 78.93,
+    'Life expectancy at birth, men': 73.72,
+    'Life expectancy at age 65, women': 17.8,
+    'Life expectancy at age 65, men': 14.91,
+    'Total fertility rate': 1.79,
+    'Adolescent fertility rate': 14.46712,
+    'Mean age of women at birth of first child': null,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 39.33824,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 60.27475,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': 5.55556,
+    'Female members of parliament, percent of total': 5.71429,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': 0.53897,
+    'Unemployment rate': 14.4,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': 16805.57156,
+    'GDP at current prices, millions of NCUs': 737655.5,
+    'GDP per capita at current prices and PPPs, US$': 5552.00023,
+    'GDP per capita at current prices, NCUs': 243696.76967,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 4908.81899,
+    'Purchasing power parity (PPP), NCU per US$': 43.89351,
+    'Exchange rate (XR), NCU per US$': 102.78005,
+    'Consumer price index, growth rate': 2.28066,
+    'Export of goods and services, per cent of GDP': 22.21758,
+    'Import of goods and services, per cent of GDP': 44.82965,
+    'External balance on goods and services, per cent of GDP': -22.61207,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 99.32611,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 94.30338
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 94.25657,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 23.39562 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 10.25082
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 17.84737,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 24.22121,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 12.47036,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 10.41553,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 1.39908,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 315,
+    'Persons injured in road accidents': 820,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': 428
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea4b"),
+    Country: 'Albania',
+    Year: '2005',
+    'Area (square kilometres)': 28748,
+    'Total population': 3142065,
+    'Population density, pers': { ' per sq': { ' km': 109.29682 } },
+    'Population aged 0-14, male': 422474,
+    'Population aged 0-14, female': 397035,
+    'Population aged 15-64, male': 1017940,
+    'Population aged 15-64, female': 1038397,
+    'Population aged 64+, male': 124902,
+    'Population aged 64+, female': 141317,
+    'Total population, male (%)': 49.81807,
+    'Total population, female (%)': 50.18193,
+    'Life expectancy at birth, women': 78.6,
+    'Life expectancy at birth, men': 72.1,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': 1.78,
+    'Adolescent fertility rate': 18.5609,
+    'Mean age of women at birth of first child': 24,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 39.63134,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 58.42874,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': 5.55556,
+    'Female members of parliament, percent of total': 6.42857,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': 0.09502,
+    'Unemployment rate': 14.1,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': 18427.29118,
+    'GDP at current prices, millions of NCUs': 804163.2,
+    'GDP per capita at current prices and PPPs, US$': 6118.99464,
+    'GDP per capita at current prices, NCUs': 267031.66871,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 5383.28921,
+    'Purchasing power parity (PPP), NCU per US$': 43.63979,
+    'Exchange rate (XR), NCU per US$': 99.87025,
+    'Consumer price index, growth rate': 2.36659,
+    'Export of goods and services, per cent of GDP': 23.01299,
+    'Import of goods and services, per cent of GDP': 47.85934,
+    'External balance on goods and services, per cent of GDP': -24.84635,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 100,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 100
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 100,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 21.54198 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 11.13595
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 17.53491,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 24.5315,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 13.01708,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 10.50352,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 1.73507,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 307,
+    'Persons injured in road accidents': 875,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea4c"),
+    Country: 'Albania',
+    Year: '2006',
+    'Area (square kilometres)': 28748,
+    'Total population': 3146813,
+    'Population density, pers': { ' per sq': { ' km': 109.46198 } },
+    'Population aged 0-14, male': 412338,
+    'Population aged 0-14, female': 382518,
+    'Population aged 15-64, male': 1034511,
+    'Population aged 15-64, female': 1043079,
+    'Population aged 64+, male': 129029,
+    'Population aged 64+, female': 145338,
+    'Total population, male (%)': 50.07854,
+    'Total population, female (%)': 49.92146,
+    'Life expectancy at birth, women': 78,
+    'Life expectancy at birth, men': 73.9,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': null,
+    'Adolescent fertility rate': 17.65727,
+    'Mean age of women at birth of first child': 25,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 39.57565,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 58.04428,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': 6.25,
+    'Female members of parliament, percent of total': 7.14286,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': 0.31713,
+    'Unemployment rate': 13.8,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': 20920.41394,
+    'GDP at current prices, millions of NCUs': 872735.1,
+    'GDP per capita at current prices and PPPs, US$': 6990.83188,
+    'GDP per capita at current prices, NCUs': 291635.92922,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 6162.44321,
+    'Purchasing power parity (PPP), NCU per US$': 41.71691,
+    'Exchange rate (XR), NCU per US$': 98.10338,
+    'Consumer price index, growth rate': 2.37052,
+    'Export of goods and services, per cent of GDP': 25.20961,
+    'Import of goods and services, per cent of GDP': 49.05747,
+    'External balance on goods and services, per cent of GDP': -23.84787,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 103.11851,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 109.2021
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 104.79513,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 20.46267 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 11.18687
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 18.05762,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 24.36381,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 13.75663,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 10.45057,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 1.72183,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 277,
+    'Persons injured in road accidents': 1065,
+    'Total length of motorways (km)': 2655,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea4d"),
+    Country: 'Albania',
+    Year: '2007',
+    'Area (square kilometres)': 28748,
+    'Total population': 3161337,
+    'Population density, pers': { ' per sq': { ' km': 109.9672 } },
+    'Population aged 0-14, male': 403781,
+    'Population aged 0-14, female': 371622,
+    'Population aged 15-64, male': 1050345,
+    'Population aged 15-64, female': 1051923,
+    'Population aged 64+, male': 133370,
+    'Population aged 64+, female': 150296,
+    'Total population, male (%)': 50.21597,
+    'Total population, female (%)': 49.78403,
+    'Life expectancy at birth, women': null,
+    'Life expectancy at birth, men': null,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': 1.3,
+    'Adolescent fertility rate': 17.44751,
+    'Mean age of women at birth of first child': 25,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 43.40859,
+    'Female part-time employment, percent of both sexes': 62.92393,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 56.26449,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 20.46979,
+    'Female professionals, percent of total for both sexes': 58.86119,
+    'Female clerks, percent of total for both sexes': 43.89878,
+    'Female craft and related workers, percent of total for both sexes': 19.10479,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 17.84046,
+    'Female government ministers, percent of total': 6.25,
+    'Female members of parliament, percent of total': 7.14286,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': 0.42158,
+    'Unemployment rate': 13.36596,
+    'Youth unemployment rate': 20.1,
+    'Economic acivity rate, women 15-64': 56.79693,
+    'Economic activity rate, men 15-64': 73.84459,
+    'GDP at current prices and PPPs, millions of US$': 22695.24932,
+    'GDP at current prices, millions of NCUs': 965527.8,
+    'GDP per capita at current prices and PPPs, US$': 7641.44663,
+    'GDP per capita at current prices, NCUs': 325091.34619,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 7048.80481,
+    'Purchasing power parity (PPP), NCU per US$': 42.54317,
+    'Exchange rate (XR), NCU per US$': 90.42789,
+    'Consumer price index, growth rate': 2.9335,
+    'Export of goods and services, per cent of GDP': 28.24788,
+    'Import of goods and services, per cent of GDP': 54.95422,
+    'External balance on goods and services, per cent of GDP': -26.70635,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 105.9195,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 114.11472
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 112.39243,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 19.68657 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 10.77218
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 18.30993,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 24.99166,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 13.99377,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 10.19289,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.053,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 384,
+    'Persons injured in road accidents': 1344,
+    'Total length of motorways (km)': 2631,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea4e"),
+    Country: 'Albania',
+    Year: '2008',
+    'Area (square kilometres)': 28748,
+    'Total population': 3181950,
+    'Population density, pers': { ' per sq': { ' km': 110.68422 } },
+    'Population aged 0-14, male': 396600,
+    'Population aged 0-14, female': 365265,
+    'Population aged 15-64, male': 1061262,
+    'Population aged 15-64, female': 1065136,
+    'Population aged 64+, male': 137664,
+    'Population aged 64+, female': 156023,
+    'Total population, male (%)': 50.14303,
+    'Total population, female (%)': 49.85697,
+    'Life expectancy at birth, women': 77.78,
+    'Life expectancy at birth, men': 72.91,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': 1.6,
+    'Adolescent fertility rate': 19.17428,
+    'Mean age of women at birth of first child': 25,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 44.83403,
+    'Female part-time employment, percent of both sexes': 65.71711,
+    'Gender pay gap in monthly earnings': 14.66259,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 56.48547,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 23.74432,
+    'Female professionals, percent of total for both sexes': 56.57854,
+    'Female clerks, percent of total for both sexes': 43.06353,
+    'Female craft and related workers, percent of total for both sexes': 17.35593,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 11.73228,
+    'Female government ministers, percent of total': 11.76471,
+    'Female members of parliament, percent of total': 7.14286,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': 20.43011,
+    'Total employment, growth rate': -3.97146,
+    'Unemployment rate': 13.05188,
+    'Youth unemployment rate': 27.2,
+    'Economic acivity rate, women 15-64': 53.78168,
+    'Economic activity rate, men 15-64': 65.63478,
+    'GDP at current prices and PPPs, millions of US$': 25845.27376,
+    'GDP at current prices, millions of NCUs': 1080675.9,
+    'GDP per capita at current prices and PPPs, US$': 8769.10598,
+    'GDP per capita at current prices, NCUs': 366665.16247,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 8196.71979,
+    'Purchasing power parity (PPP), NCU per US$': 41.81329,
+    'Exchange rate (XR), NCU per US$': 83.8946,
+    'Consumer price index, growth rate': 3.36076,
+    'Export of goods and services, per cent of GDP': 29.58661,
+    'Import of goods and services, per cent of GDP': 56.43098,
+    'External balance on goods and services, per cent of GDP': -26.84437,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 113.40952,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 122.18234
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 117.93437,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 19.42054 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 10.77489
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 18.24678,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 24.72265,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 14.23963,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 10.47275,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.12277,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 303,
+    'Persons injured in road accidents': 1256,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea4f"),
+    Country: 'Albania',
+    Year: '2009',
+    'Area (square kilometres)': 28748,
+    'Total population': 3194417,
+    'Population density, pers': { ' per sq': { ' km': 111.11789 } },
+    'Population aged 0-14, male': 388901,
+    'Population aged 0-14, female': 358535,
+    'Population aged 15-64, male': 1069596,
+    'Population aged 15-64, female': 1077017,
+    'Population aged 64+, male': 140550,
+    'Population aged 64+, female': 159818,
+    'Total population, male (%)': 50.05755,
+    'Total population, female (%)': 49.94245,
+    'Life expectancy at birth, women': 77.8,
+    'Life expectancy at birth, men': 73.4,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': 1.6,
+    'Adolescent fertility rate': 18.87153,
+    'Mean age of women at birth of first child': 25,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 43.89264,
+    'Female part-time employment, percent of both sexes': 63.01883,
+    'Gender pay gap in monthly earnings': 11.4878,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 55.65374,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 22.46627,
+    'Female professionals, percent of total for both sexes': 60.6051,
+    'Female clerks, percent of total for both sexes': 43.59657,
+    'Female craft and related workers, percent of total for both sexes': 19.53214,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 1.17288,
+    'Female government ministers, percent of total': 5.55556,
+    'Female members of parliament, percent of total': null,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': 42.47492,
+    'Women, percent of all victims of homicides': 8.23529,
+    'Total employment, growth rate': 0.95563,
+    'Unemployment rate': 13.76226,
+    'Youth unemployment rate': 27.2,
+    'Economic acivity rate, women 15-64': 54.47651,
+    'Economic activity rate, men 15-64': 69.6781,
+    'GDP at current prices and PPPs, millions of US$': 27349.12136,
+    'GDP at current prices, millions of NCUs': 1143936.5,
+    'GDP per capita at current prices and PPPs, US$': 9342.0784,
+    'GDP per capita at current prices, NCUs': 390752.75318,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 8592.10551,
+    'Purchasing power parity (PPP), NCU per US$': 41.82718,
+    'Exchange rate (XR), NCU per US$': 94.97812,
+    'Consumer price index, growth rate': 2.27798,
+    'Export of goods and services, per cent of GDP': 29.61699,
+    'Import of goods and services, per cent of GDP': 53.80403,
+    'External balance on goods and services, per cent of GDP': -24.18703,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 115.56931,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 124.19124
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 124.22798,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 19.40978 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 10.92773
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 17.28786,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 24.6669,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 13.74629,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 11.49792,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.46351,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 378,
+    'Persons injured in road accidents': 1455,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea50"),
+    Country: 'Albania',
+    Year: '2010',
+    'Area (square kilometres)': 28748,
+    'Total population': 2856673,
+    'Population density, pers': { ' per sq': { ' km': 99.36945 } },
+    'Population aged 0-14, male': 326415,
+    'Population aged 0-14, female': 300715,
+    'Population aged 15-64, male': 956944,
+    'Population aged 15-64, female': 963741,
+    'Population aged 64+, male': 147009,
+    'Population aged 64+, female': 161849,
+    'Total population, male (%)': 50.07111,
+    'Total population, female (%)': 49.92889,
+    'Life expectancy at birth, women': 79.3,
+    'Life expectancy at birth, men': 74.7,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': null,
+    'Adolescent fertility rate': 19.7697,
+    'Mean age of women at birth of first child': 25,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 43.5437,
+    'Female part-time employment, percent of both sexes': 61.24605,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 55.39714,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 19.09969,
+    'Female professionals, percent of total for both sexes': 63.08317,
+    'Female clerks, percent of total for both sexes': 40.82776,
+    'Female craft and related workers, percent of total for both sexes': 18.99643,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 8.59075,
+    'Female government ministers, percent of total': 6.66667,
+    'Female members of parliament, percent of total': 16.42857,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': 41.02564,
+    'Women, percent of all victims of homicides': 14.96063,
+    'Total employment, growth rate': -0.65479,
+    'Unemployment rate': 14.03896,
+    'Youth unemployment rate': 30.45733,
+    'Economic acivity rate, women 15-64': 60.94634,
+    'Economic activity rate, men 15-64': 79.00805,
+    'GDP at current prices and PPPs, millions of US$': 27102.55102,
+    'GDP at current prices, millions of NCUs': 1239644.6,
+    'GDP per capita at current prices and PPPs, US$': 9303.93578,
+    'GDP per capita at current prices, NCUs': 425553.06864,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 8305.31925,
+    'Purchasing power parity (PPP), NCU per US$': 45.73904,
+    'Exchange rate (XR), NCU per US$': 103.93644,
+    'Consumer price index, growth rate': 3.55272,
+    'Export of goods and services, per cent of GDP': 32.42437,
+    'Import of goods and services, per cent of GDP': 52.99631,
+    'External balance on goods and services, per cent of GDP': -20.57194,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 124.41008,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 127.26043
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 127.39258,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 20.65819 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 13.81806
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 14.87248,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 23.1384,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 13.04819,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 11.59097,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.8737,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 352,
+    'Persons injured in road accidents': 1716,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea51"),
+    Country: 'Albania',
+    Year: '2011',
+    'Area (square kilometres)': 28748,
+    'Total population': 2829337,
+    'Population density, pers': { ' per sq': { ' km': 98.41857 } },
+    'Population aged 0-14, male': 310824,
+    'Population aged 0-14, female': 285517,
+    'Population aged 15-64, male': 956156,
+    'Population aged 15-64, female': 961509,
+    'Population aged 64+, male': 150425,
+    'Population aged 64+, female': 164906,
+    'Total population, male (%)': 50.09672,
+    'Total population, female (%)': 49.90328,
+    'Life expectancy at birth, women': 79.8,
+    'Life expectancy at birth, men': 75.3,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': 1.58,
+    'Adolescent fertility rate': 21.02609,
+    'Mean age of women at birth of first child': 24,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 44.32095,
+    'Female part-time employment, percent of both sexes': 54.41214,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 55.50209,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 26.58819,
+    'Female professionals, percent of total for both sexes': 58.26506,
+    'Female clerks, percent of total for both sexes': 53.72483,
+    'Female craft and related workers, percent of total for both sexes': 22.75912,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 21.29573,
+    'Female government ministers, percent of total': 6.66667,
+    'Female members of parliament, percent of total': 16.42857,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': 42.26519,
+    'Women, percent of all victims of homicides': 12.67606,
+    'Total employment, growth rate': 4.80279,
+    'Unemployment rate': 13.97657,
+    'Youth unemployment rate': 23.89579,
+    'Economic acivity rate, women 15-64': 60.92972,
+    'Economic activity rate, men 15-64': 76.34006,
+    'GDP at current prices and PPPs, millions of US$': 28002.49963,
+    'GDP at current prices, millions of NCUs': 1300624.1,
+    'GDP per capita at current prices and PPPs, US$': 9640.14474,
+    'GDP per capita at current prices, NCUs': 447753.04842,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 8606.10383,
+    'Purchasing power parity (PPP), NCU per US$': 46.44671,
+    'Exchange rate (XR), NCU per US$': 100.89495,
+    'Consumer price index, growth rate': 3.44917,
+    'Export of goods and services, per cent of GDP': 34.01369,
+    'Import of goods and services, per cent of GDP': 56.74918,
+    'External balance on goods and services, per cent of GDP': -22.73549,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 130.3482,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 130.24625
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 131.25876,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 20.95812 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 13.53275
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 14.62074,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 23.04076,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 13.2457,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 11.8345,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.76742,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 322,
+    'Persons injured in road accidents': 2150,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea52"),
+    Country: 'Albania',
+    Year: '2012',
+    'Area (square kilometres)': 28748,
+    'Total population': 2801681,
+    'Population density, pers': { ' per sq': { ' km': 97.45655 } },
+    'Population aged 0-14, male': 296840,
+    'Population aged 0-14, female': 272276,
+    'Population aged 15-64, male': 952602,
+    'Population aged 15-64, female': 956214,
+    'Population aged 64+, male': 154734,
+    'Population aged 64+, female': 169015,
+    'Total population, male (%)': 50.11905,
+    'Total population, female (%)': 49.88095,
+    'Life expectancy at birth, women': 79.7,
+    'Life expectancy at birth, men': 75.5,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': 1.78,
+    'Adolescent fertility rate': 21.41988,
+    'Mean age of women at birth of first child': 24,
+    'Computer use, 16-24, male': 62.7,
+    'Computer use, 16-24, female': 51.5,
+    'Computer use, 25-54, male': 24.4,
+    'Computer use, 25-54, female': 18.5,
+    'Computer use, 55-74, male': 7.6,
+    'Computer use, 55-74, female': 3.8,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 43.2407,
+    'Female part-time employment, percent of both sexes': 52.75048,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 55.86809,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 16.06985,
+    'Female professionals, percent of total for both sexes': 62.06783,
+    'Female clerks, percent of total for both sexes': 44.48552,
+    'Female craft and related workers, percent of total for both sexes': 20.18766,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 20.49855,
+    'Female government ministers, percent of total': 7.14286,
+    'Female members of parliament, percent of total': 15.71429,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': 42.61838,
+    'Women, percent of all victims of homicides': 16.66667,
+    'Total employment, growth rate': 1.21868,
+    'Unemployment rate': 13.35381,
+    'Youth unemployment rate': 29.75717,
+    'Economic acivity rate, women 15-64': 56.3023,
+    'Economic activity rate, men 15-64': 73.96967,
+    'GDP at current prices and PPPs, millions of US$': 30050.71584,
+    'GDP at current prices, millions of NCUs': 1332811,
+    'GDP per capita at current prices and PPPs, US$': 10361.42258,
+    'GDP per capita at current prices, NCUs': 459550.38359,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 9202.15549,
+    'Purchasing power parity (PPP), NCU per US$': 44.35205,
+    'Exchange rate (XR), NCU per US$': 108.18464,
+    'Consumer price index, growth rate': 2.0324,
+    'Export of goods and services, per cent of GDP': 33.35165,
+    'Import of goods and services, per cent of GDP': 51.98687,
+    'External balance on goods and services, per cent of GDP': -18.63522,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 137.37744,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 121.72737
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 135.45294,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 21.66068 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 13.30748
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 13.14511,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 23.03595,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 14.19029,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 12.52777,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.13272,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 334,
+    'Persons injured in road accidents': 2235,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea53"),
+    Country: 'Albania',
+    Year: '2013',
+    'Area (square kilometres)': 28748,
+    'Total population': 2896652,
+    'Population density, pers': { ' per sq': { ' km': 100.76012 } },
+    'Population aged 0-14, male': 294929,
+    'Population aged 0-14, female': 270837,
+    'Population aged 15-64, male': 999784,
+    'Population aged 15-64, female': 989842,
+    'Population aged 64+, male': 163555,
+    'Population aged 64+, female': 177705,
+    'Total population, male (%)': 50.34322,
+    'Total population, female (%)': 49.65678,
+    'Life expectancy at birth, women': 80,
+    'Life expectancy at birth, men': 76,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': 1.8,
+    'Adolescent fertility rate': 20.44063,
+    'Mean age of women at birth of first child': 24.4,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 43.76746,
+    'Female part-time employment, percent of both sexes': 52.03172,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 56.5479,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 31.92632,
+    'Female professionals, percent of total for both sexes': 57.62349,
+    'Female clerks, percent of total for both sexes': 43.51192,
+    'Female craft and related workers, percent of total for both sexes': 22.187,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 32.75625,
+    'Female government ministers, percent of total': 31.57895,
+    'Female members of parliament, percent of total': null,
+    'Female ambassadors, percent of total': 16.66667,
+    'Female judges, percent of total': 44.10959,
+    'Women, percent of all victims of homicides': 16.52893,
+    'Total employment, growth rate': -4.42319,
+    'Unemployment rate': 15.93482,
+    'Youth unemployment rate': 31.39299,
+    'Economic acivity rate, women 15-64': 52.71993,
+    'Economic activity rate, men 15-64': 66.15829,
+    'GDP at current prices and PPPs, millions of US$': 30150.00506,
+    'GDP at current prices, millions of NCUs': 1350052.6,
+    'GDP per capita at current prices and PPPs, US$': 10408.57717,
+    'GDP per capita at current prices, NCUs': 466073.77488,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 9477.51919,
+    'Purchasing power parity (PPP), NCU per US$': 44.77786,
+    'Exchange rate (XR), NCU per US$': 105.66867,
+    'Consumer price index, growth rate': 1.93665,
+    'Export of goods and services, per cent of GDP': 28.73775,
+    'Import of goods and services, per cent of GDP': 46.95741,
+    'External balance on goods and services, per cent of GDP': -18.21966,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 138.93678,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 122.70802
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 135.87002,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 22.42851 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 14.64403
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 11.7923,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 21.35707,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 14.83022,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 12.73188,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.21599,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': null,
+    'Persons injured in road accidents': null,
+    'Total length of motorways (km)': 1000,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea54"),
+    Country: 'Albania',
+    Year: '2014',
+    'Area (square kilometres)': 28748,
+    'Total population': 2893654,
+    'Population density, pers': { ' per sq': { ' km': 100.65584 } },
+    'Population aged 0-14, male': 283527,
+    'Population aged 0-14, female': 260811,
+    'Population aged 15-64, male': 1007448,
+    'Population aged 15-64, female': 988932,
+    'Population aged 64+, male': 169498,
+    'Population aged 64+, female': 183438,
+    'Total population, male (%)': 50.47158,
+    'Total population, female (%)': 49.52842,
+    'Life expectancy at birth, women': 80.3,
+    'Life expectancy at birth, men': 76.4,
+    'Life expectancy at age 65, women': 18.6,
+    'Life expectancy at age 65, men': 16.7,
+    'Total fertility rate': 1.8,
+    'Adolescent fertility rate': 21.90421,
+    'Mean age of women at birth of first child': 24.5,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 42.35392,
+    'Female part-time employment, percent of both sexes': 51.12495,
+    'Gender pay gap in monthly earnings': 10.09567,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': 56.71195,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 18.47199,
+    'Female professionals, percent of total for both sexes': 60.009,
+    'Female clerks, percent of total for both sexes': 45.3042,
+    'Female craft and related workers, percent of total for both sexes': 14.43274,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 35.72233,
+    'Female government ministers, percent of total': 42.10526,
+    'Female members of parliament, percent of total': 20,
+    'Female ambassadors, percent of total': 24.4898,
+    'Female judges, percent of total': 46.26039,
+    'Women, percent of all victims of homicides': 8.95522,
+    'Total employment, growth rate': 0.91864,
+    'Unemployment rate': 17.48782,
+    'Youth unemployment rate': 39.04893,
+    'Economic acivity rate, women 15-64': 52.7735,
+    'Economic activity rate, men 15-64': 69.83418,
+    'GDP at current prices and PPPs, millions of US$': 32172.07495,
+    'GDP at current prices, millions of NCUs': 1394419.3,
+    'GDP per capita at current prices and PPPs, US$': 11118.16389,
+    'GDP per capita at current prices, NCUs': 481889.41303,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 10343.68734,
+    'Purchasing power parity (PPP), NCU per US$': 43.34254,
+    'Exchange rate (XR), NCU per US$': 105.47923,
+    'Consumer price index, growth rate': 1.63343,
+    'Export of goods and services, per cent of GDP': 28.23092,
+    'Import of goods and services, per cent of GDP': 47.22482,
+    'External balance on goods and services, per cent of GDP': -18.9939,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 141.66265,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 117.28218
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 142.44339,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 22.92021 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 14.67156
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 9.97605,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 21.2895,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 15.72528,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 12.74179,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.6756,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': null,
+    'Persons injured in road accidents': null,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea55"),
+    Country: 'Albania',
+    Year: '2015',
+    'Area (square kilometres)': 28748,
+    'Total population': 2889167,
+    'Population density, pers': { ' per sq': { ' km': 100.49976 } },
+    'Population aged 0-14, male': 271516,
+    'Population aged 0-14, female': 250221,
+    'Population aged 15-64, male': 1014087,
+    'Population aged 15-64, female': 988171,
+    'Population aged 64+, male': 175804,
+    'Population aged 64+, female': 189368,
+    'Total population, male (%)': 50.5823,
+    'Total population, female (%)': 49.4177,
+    'Life expectancy at birth, women': null,
+    'Life expectancy at birth, men': null,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': null,
+    'Adolescent fertility rate': null,
+    'Mean age of women at birth of first child': null,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 42.89236,
+    'Female part-time employment, percent of both sexes': 47.53789,
+    'Gender pay gap in monthly earnings': 6.8758,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': null,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 19.92836,
+    'Female professionals, percent of total for both sexes': 63.57039,
+    'Female clerks, percent of total for both sexes': 41.96453,
+    'Female craft and related workers, percent of total for both sexes': 13.83784,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 38.13133,
+    'Female government ministers, percent of total': 42.10526,
+    'Female members of parliament, percent of total': 20.71429,
+    'Female ambassadors, percent of total': 24.39024,
+    'Female judges, percent of total': 45.93838,
+    'Women, percent of all victims of homicides': 21.21212,
+    'Total employment, growth rate': 5.10971,
+    'Unemployment rate': 17.0939,
+    'Youth unemployment rate': 39.79611,
+    'Economic acivity rate, women 15-64': 55.86887,
+    'Economic activity rate, men 15-64': 71.71495,
+    'GDP at current prices and PPPs, millions of US$': 32500.14865,
+    'GDP at current prices, millions of NCUs': 1435751.2,
+    'GDP per capita at current prices and PPPs, US$': 11248.95685,
+    'GDP per capita at current prices, NCUs': 496942.44368,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': null,
+    'Purchasing power parity (PPP), NCU per US$': 44.17676,
+    'Exchange rate (XR), NCU per US$': 125.96083,
+    'Consumer price index, growth rate': 1.91047,
+    'Export of goods and services, per cent of GDP': null,
+    'Import of goods and services, per cent of GDP': null,
+    'External balance on goods and services, per cent of GDP': null,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': 140.68498,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': 127.83381
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': 146.83607,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': 22.13599 },
+    'GDP: in industry etc': {
+      ' (ISIC4 B-E), output approach, per cent share of GVA': 14.63457
+    },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': 10.81832,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': 21.12439,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': 15.9188,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': 12.73059,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': 2.63733,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': null,
+    'Persons injured in road accidents': null,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea56"),
+    Country: 'Albania',
+    Year: '2016',
+    'Area (square kilometres)': 28748,
+    'Total population': null,
+    'Population density, pers': { ' per sq': { ' km': null } },
+    'Population aged 0-14, male': null,
+    'Population aged 0-14, female': null,
+    'Population aged 15-64, male': null,
+    'Population aged 15-64, female': null,
+    'Population aged 64+, male': null,
+    'Population aged 64+, female': null,
+    'Total population, male (%)': null,
+    'Total population, female (%)': null,
+    'Life expectancy at birth, women': null,
+    'Life expectancy at birth, men': null,
+    'Life expectancy at age 65, women': null,
+    'Life expectancy at age 65, men': null,
+    'Total fertility rate': null,
+    'Adolescent fertility rate': null,
+    'Mean age of women at birth of first child': null,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': null,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': null,
+    'Gender pay gap in hourly earning wage rate': null,
+    'Female tertiary students, percent of total': null,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': null,
+    'Female members of parliament, percent of total': 22.85714,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': null,
+    'Unemployment rate': null,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': null,
+    'GDP at current prices, millions of NCUs': null,
+    'GDP per capita at current prices and PPPs, US$': null,
+    'GDP per capita at current prices, NCUs': null,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': null,
+    'Purchasing power parity (PPP), NCU per US$': null,
+    'Exchange rate (XR), NCU per US$': 124.14087,
+    'Consumer price index, growth rate': null,
+    'Export of goods and services, per cent of GDP': null,
+    'Import of goods and services, per cent of GDP': null,
+    'External balance on goods and services, per cent of GDP': null,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': null,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': null
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': null,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': null },
+    'GDP: in industry etc': { ' (ISIC4 B-E), output approach, per cent share of GVA': null },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': null,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': null,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': null,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': null,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': null,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': null,
+    'Persons injured in road accidents': null,
+    'Total length of motorways (km)': null,
+    'Total length of railway lines (km)': null
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea57"),
+    Country: 'Armenia',
+    Year: '2000',
+    'Area (square kilometres)': 29743,
+    'Total population': 3221105,
+    'Population density, pers': { ' per sq': { ' km': 108.29792 } },
+    'Population aged 0-14, male': 406848,
+    'Population aged 0-14, female': 382516,
+    'Population aged 15-64, male': 1014608,
+    'Population aged 15-64, female': 1116093,
+    'Population aged 64+, male': 122941,
+    'Population aged 64+, female': 178099,
+    'Total population, male (%)': 47.94619,
+    'Total population, female (%)': 52.05381,
+    'Life expectancy at birth, women': 75.83,
+    'Life expectancy at birth, men': 70.44,
+    'Life expectancy at age 65, women': 15.81,
+    'Life expectancy at age 65, men': 14.35,
+    'Total fertility rate': 1.31,
+    'Adolescent fertility rate': 31.5772,
+    'Mean age of women at birth of first child': 22.3,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 47.63682,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': 48.09641,
+    'Gender pay gap in hourly earning wage rate': 48.09641,
+    'Female tertiary students, percent of total': 58.64384,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': null,
+    'Female members of parliament, percent of total': 3.05344,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': 21.01449,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': -1.57967,
+    'Unemployment rate': null,
+    'Youth unemployment rate': null,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': 7116.03577,
+    'GDP at current prices, millions of NCUs': 1031338.3,
+    'GDP per capita at current prices and PPPs, US$': 2209.1943,
+    'GDP per capita at current prices, NCUs': 320182.01857,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 2406.60043,
+    'Purchasing power parity (PPP), NCU per US$': 144.93158,
+    'Exchange rate (XR), NCU per US$': 539.52583,
+    'Consumer price index, growth rate': -0.79,
+    'Export of goods and services, per cent of GDP': 23.37528,
+    'Import of goods and services, per cent of GDP': 50.54329,
+    'External balance on goods and services, per cent of GDP': -27.16801,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': null,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': null
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': null,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': null },
+    'GDP: in industry etc': { ' (ISIC4 B-E), output approach, per cent share of GVA': null },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': null,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': null,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': null,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': null,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': null,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 214,
+    'Persons injured in road accidents': 1163,
+    'Total length of motorways (km)': 1560,
+    'Total length of railway lines (km)': 842.9
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea58"),
+    Country: 'Armenia',
+    Year: '2001',
+    'Area (square kilometres)': 29743,
+    'Total population': 3211815,
+    'Population density, pers': { ' per sq': { ' km': 107.98558 } },
+    'Population aged 0-14, male': 402129,
+    'Population aged 0-14, female': 374203,
+    'Population aged 15-64, male': 1012293,
+    'Population aged 15-64, female': 1110906,
+    'Population aged 64+, male': 126969,
+    'Population aged 64+, female': 185315,
+    'Total population, male (%)': 47.99128,
+    'Total population, female (%)': 52.00872,
+    'Life expectancy at birth, women': 76.32,
+    'Life expectancy at birth, men': 70.04,
+    'Life expectancy at age 65, women': 16.28,
+    'Life expectancy at age 65, men': 13.57,
+    'Total fertility rate': 1.24,
+    'Adolescent fertility rate': 27.58226,
+    'Mean age of women at birth of first child': 22.4,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 47.17254,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': 54.22305,
+    'Gender pay gap in hourly earning wage rate': 54.22305,
+    'Female tertiary students, percent of total': 58.61108,
+    'Women Researchers, Percent of corresponding total for both sexes': null,
+    'Female legislators, senior officials and managers, percent of total': 23.93956,
+    'Female professionals, percent of total for both sexes': 64.27015,
+    'Female clerks, percent of total for both sexes': 72.79855,
+    'Female craft and related workers, percent of total for both sexes': 24.66577,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': 4.51475,
+    'Female government ministers, percent of total': null,
+    'Female members of parliament, percent of total': 3.05344,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': 20.57143,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': -0.99949,
+    'Unemployment rate': 38.4,
+    'Youth unemployment rate': 65.6,
+    'Economic acivity rate, women 15-64': 65.0488,
+    'Economic activity rate, men 15-64': 79.73917,
+    'GDP at current prices and PPPs, millions of US$': 7973.75496,
+    'GDP at current prices, millions of NCUs': 1175876.8,
+    'GDP per capita at current prices and PPPs, US$': 2482.64368,
+    'GDP per capita at current prices, NCUs': 366111.46398,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 2602.70749,
+    'Purchasing power parity (PPP), NCU per US$': 147.46839,
+    'Exchange rate (XR), NCU per US$': 555.07826,
+    'Consumer price index, growth rate': 3.14507,
+    'Export of goods and services, per cent of GDP': 25.46839,
+    'Import of goods and services, per cent of GDP': 46.14881,
+    'External balance on goods and services, per cent of GDP': -20.68041,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': null,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': null
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': null,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': null },
+    'GDP: in industry etc': { ' (ISIC4 B-E), output approach, per cent share of GVA': null },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': null,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': null,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': null,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': null,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': null,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 237,
+    'Persons injured in road accidents': 1258,
+    'Total length of motorways (km)': 1560,
+    'Total length of railway lines (km)': 842.9
+  },
+  {
+    _id: ObjectId("64528e221a20ffb9fb43ea59"),
+    Country: 'Armenia',
+    Year: '2002',
+    'Area (square kilometres)': 29743,
+    'Total population': 3199768,
+    'Population density, pers': { ' per sq': { ' km': 107.58054 } },
+    'Population aged 0-14, male': 391692,
+    'Population aged 0-14, female': 363527,
+    'Population aged 15-64, male': 1014167,
+    'Population aged 15-64, female': 1111541,
+    'Population aged 64+, male': 129781,
+    'Population aged 64+, female': 189060,
+    'Total population, male (%)': 47.99223,
+    'Total population, female (%)': 52.00777,
+    'Life expectancy at birth, women': 75.62,
+    'Life expectancy at birth, men': 69.72,
+    'Life expectancy at age 65, women': 15.27,
+    'Life expectancy at age 65, men': 12.6,
+    'Total fertility rate': 1.21,
+    'Adolescent fertility rate': 27.64135,
+    'Mean age of women at birth of first child': 22.4,
+    'Computer use, 16-24, male': null,
+    'Computer use, 16-24, female': null,
+    'Computer use, 25-54, male': null,
+    'Computer use, 25-54, female': null,
+    'Computer use, 55-74, male': null,
+    'Computer use, 55-74, female': null,
+    'Women in the Labour Force, Percent of corresponding total for both sexes': 49.72986,
+    'Female part-time employment, percent of both sexes': null,
+    'Gender pay gap in monthly earnings': 59.31439,
+    'Gender pay gap in hourly earning wage rate': 59.31439,
+    'Female tertiary students, percent of total': 57.70085,
+    'Women Researchers, Percent of corresponding total for both sexes': 45.49503,
+    'Female legislators, senior officials and managers, percent of total': null,
+    'Female professionals, percent of total for both sexes': null,
+    'Female clerks, percent of total for both sexes': null,
+    'Female craft and related workers, percent of total for both sexes': null,
+    'Female plant and machine operators and assemblers, percent of total for both sexes': null,
+    'Female government ministers, percent of total': null,
+    'Female members of parliament, percent of total': 3.05344,
+    'Female ambassadors, percent of total': null,
+    'Female judges, percent of total': null,
+    'Women, percent of all victims of homicides': null,
+    'Total employment, growth rate': -12.535,
+    'Unemployment rate': 35.3,
+    'Youth unemployment rate': 66.7,
+    'Economic acivity rate, women 15-64': null,
+    'Economic activity rate, men 15-64': null,
+    'GDP at current prices and PPPs, millions of US$': 9163.74629,
+    'GDP at current prices, millions of NCUs': 1362471.7,
+    'GDP per capita at current prices and PPPs, US$': 2863.89446,
+    'GDP per capita at current prices, NCUs': 425805.67232,
+    'Final consumption expenditure per capita, US Dollars, current PPPs': 2837.31003,
+    'Purchasing power parity (PPP), NCU per US$': 148.68064,
+    'Exchange rate (XR), NCU per US$': 573.35333,
+    'Consumer price index, growth rate': 1.06031,
+    'Export of goods and services, per cent of GDP': 29.35655,
+    'Import of goods and services, per cent of GDP': 46.58687,
+    'External balance on goods and services, per cent of GDP': -17.23032,
+    'GDP in agriculture (ISIC4 A): output approach, index, 2005=100': null,
+    'GDP in industry (incl': {
+      ' construction) (ISIC4 B-F): output approach, index, 2005=100': null
+    },
+    'GDP in services (ISIC4 G-U): output approach, index, 2005=100': null,
+    'GDP: in agriculture etc': { ' (ISIC4 A), output approach, per cent share of GVA': null },
+    'GDP: in industry etc': { ' (ISIC4 B-E), output approach, per cent share of GVA': null },
+    'GDP: in construction (ISIC4 F), output approach, per cent share of GVA': null,
+    'GDP: in trade, hospitality, transport and communication (ISIC4 G-J), output approach, per cent share of GVA': null,
+    'GDP: in finance and business services (ISIC4 K-N), output approach, per cent share of GVA': null,
+    'GDP: in public administration, education and health (ISIC4 O-Q), output approach, per cent share of GVA': null,
+    'GDP: in other service activities (ISIC4 R-U), output approach, per cent share of GVA': null,
+    'Employment in agriculture, hunting, forestry and fishing (ISIC Rev': { ' 4 A), share of total employment': null },
+    'Employment in industry and energy (ISIC Rev': { ' 4 B-E), share of total employment': null },
+    'Employment in construction (ISIC Rev': { ' 4 F), share of total employment': null },
+    'Employment in trade, hotels, restaurants, transport and communications (ISIC Rev': { ' 4 G-J), share of total employment': null },
+    'Employment in finance, real estate and business services (ISIC Rev': { ' 4 K-N), share of total employment': null },
+    'Employment in public administration, education and health (ISIC Rev': { ' 4 O-Q), share of total employment': null },
+    'Employment in other service activities (ISIC Rev': { ' 4 R-U), share of total employment': null },
+    'Persons killed in road accidents': 235,
+    'Persons injured in road accidents': 1213,
+    'Total length of motorways (km)': 1560,
+    'Total length of railway lines (km)': null
+  }
+]
+Type "it" for more
+Blog> 
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+Blog> 
+alethea@alelap150:~$ ^C
+alethea@alelap150:~$ mongos
